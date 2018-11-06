@@ -17,28 +17,12 @@ public:
 		this->syncFile = syncFile;
 		this->iterationWithoutProgressTreshold = iterationWithoutProgressTreshold;
 		this->minimumLearningRate = minimumLearningRate;
-		
-		*trainer = dnn_trainer<net_type>(this->net);
-
-		this->trainer->set_learning_rate(this->learningRate);
-		this->trainer->be_verbose();
-		this->trainer->set_synchronization_file(this->outputNetworkFile, std::chrono::minutes(5));
-		this->trainer->set_iterations_without_progress_threshold(iterationWithoutProgressTreshold);
 	}
 
 	void train() {
 		auto start = std::chrono::high_resolution_clock::now();
-
-		while (trainer->get_learning_rate() >= this->minimumLearningRate)
-		{
-			this->processSpecificNetTraining();
-		}
-
-		trainer->get_net();
-
-		net.clean();
-		serialize(this->outputNetworkFile) << net;
-
+		
+		processSpecificNetTraining();
 		auto finish = std::chrono::high_resolution_clock::now();
 		auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(finish - start);
 		this->trainingTimeMinutes = (microseconds.count() * 10e6) / 60;
@@ -53,11 +37,6 @@ protected:
 	int iterationWithoutProgressTreshold;
 	string syncFile;
 	string outputNetworkFile;
-	
-	net_type net;
-	dnn_trainer<net_type>* trainer;
-
-
 private:
 	virtual void processSpecificNetTraining() = 0;
 };

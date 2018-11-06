@@ -21,16 +21,34 @@ public:
 		string outputNetworkFile,
 		double minimumLearningRate,
 		int iterationWithoutProgressTreshold,
-		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, mmodDataLoader)
+		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(200, 200)), 20, 20, mmodDataLoader)
 	{
+		cropper = new random_cropper();
+		cropper->set_randomly_flip(false);
+		cropper->set_chip_dims(*this->chipDims);
+		cropper->set_min_object_size(this->detectorWindowTargerSize, this->detectorWindowMinTargetSize);
+		cropper->set_max_rotation_degrees(0);
+	}
+
+	~PupilTrainer() {
+		delete cropper;
 	}
 
 private:
 	dlib::rand rnd;
-
-    void preprocessTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {
-		for (auto&& img : imagesToTrain)
+	random_cropper* cropper;
+	
+	void preprocessTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {		
+		std::vector<matrix<rgb_pixel>> crops;
+		std::vector<std::vector<mmod_rect>> crop_boxes;
+		
+		(*cropper)(imagesToTrain.size(), imagesToTrain, mmodBoxes, crops, crop_boxes);
+		
+		for (auto&& img : crops)
 			disturb_colors(img, this->rnd);
+
+		imagesToTrain = crops;
+		mmodBoxes = crop_boxes;
 	}
 };
 #endif // PUPIL_TRAINER
