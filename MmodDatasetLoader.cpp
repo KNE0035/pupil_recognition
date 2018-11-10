@@ -1,4 +1,3 @@
-#include "utils.h"
 #include "MmodDatasetLoader.h"
 #include <dlib/data_io.h>
 #include <stdio.h>
