@@ -13,7 +13,7 @@ MmodDatasetLoader::~MmodDatasetLoader() {
 
 }
 
-void MmodDatasetLoader::LoadDatasetPart(std::vector<matrix<rgb_pixel>>& images, std::vector<std::vector<mmod_rect> >& object_locations) {
+void MmodDatasetLoader::loadDatasetPart(std::vector<matrix<rgb_pixel>>& images, std::vector<std::vector<mmod_rect> >& object_locations) {
 	matrix<rgb_pixel> img;
 	std::vector<mmod_rect> rects;
 	

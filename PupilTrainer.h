@@ -22,15 +22,15 @@ public:
 		double minimumLearningRate,
 		int iterationWithoutProgressTreshold,
 		bool verboseMode,
-		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(200, 200)), 20, 20, false, 0, verboseMode, mmodDataLoader)
+		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(155, 155)), 14, 14, false, 0, verboseMode, mmodDataLoader)
 	{}
 
 private:
 	dlib::rand rnd;
 	
-	void preprocessTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {		
-		for (auto&& img : imagesToTrain)
-			disturb_colors(img, this->rnd);
+	void preprocessTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {
+		/*for (auto&& img : imagesToTrain)
+			disturb_colors(img, this->rnd);*/
 	}
 };
 #endif // PUPIL_TRAINER

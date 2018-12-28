@@ -22,7 +22,7 @@ public:
 		double minimumLearningRate,
 		int iterationWithoutProgressTreshold,
 		chip_dims* normalizedChipDims,
-		int detectorWindowTargerSize,
+		int detectorWindowTargetSize,
 		int detectorWindowMinTargetSize,
 		bool cropperRandomlyFlip,
 		int cropperMaxRotationDegrees,
@@ -31,12 +31,13 @@ public:
 	{
 		this->mmodDataLoader = mmodDataLoader;
 		this->chipDims = normalizedChipDims;
-		this->detectorWindowTargerSize = detectorWindowTargerSize;
+		this->detectorWindowTargerSize = detectorWindowTargetSize;
 		this->detectorWindowMinTargetSize = detectorWindowMinTargetSize;
 
 		cropper = new random_cropper();
 		cropper->set_randomly_flip(false);
 		cropper->set_chip_dims(*this->chipDims);
+
 		cropper->set_min_object_size(this->detectorWindowTargerSize, this->detectorWindowMinTargetSize);
 		cropper->set_max_rotation_degrees(0);
 	}
@@ -50,7 +51,7 @@ protected:
 	chip_dims* chipDims;
 	int detectorWindowTargerSize;
 	int detectorWindowMinTargetSize;
-private:
+public:
 	MmodDatasetLoader* mmodDataLoader;
 	random_cropper* cropper;
 
@@ -58,12 +59,14 @@ private:
 		std::vector<matrix<rgb_pixel>> imagesToTrain;
 		std::vector<std::vector<mmod_rect>> mmodBoxes;
 
+		MmodTrainer::mmodDataLoader->loadDatasetPart(imagesToTrain, mmodBoxes);
+
 		if (imagesToTrain.size() == 0) {
 			MmodTrainer::mmodDataLoader->resetLoader();
-			MmodTrainer::mmodDataLoader->LoadDatasetPart(imagesToTrain, mmodBoxes);
+			MmodTrainer::mmodDataLoader->loadDatasetPart(imagesToTrain, mmodBoxes);
 		}
 
-		cropTrainingData(imagesToTrain, mmodBoxes);
+		//cropTrainingData(imagesToTrain, mmodBoxes);
 		preprocessTrainingData(imagesToTrain, mmodBoxes);
 
 		data = imagesToTrain;
@@ -74,7 +77,17 @@ private:
 		std::vector<matrix<rgb_pixel>> crops;
 		std::vector<std::vector<mmod_rect>> crop_boxes;
 
+		/*image_window win;
+		win.clear_overlay();
+		win.set_image(imagesToTrain[0]);*/
+
 		(*cropper)(imagesToTrain.size(), imagesToTrain, mmodBoxes, crops, crop_boxes);
+
+		/*image_window win2;
+		win2.clear_overlay();
+		win2.set_image(crops[0]);*/
+		
+		//cin.get();
 
 		imagesToTrain = crops;
 		mmodBoxes = crop_boxes;
@@ -82,7 +95,16 @@ private:
 
 	net_type getNetWithSpecificOptions() {
 		mmod_options options(mmodDataLoader->getAllMmodRects(), this->detectorWindowTargerSize, this->detectorWindowMinTargetSize);
+		
+		cout << "num detector windows: " << options.detector_windows.size() << endl;
+		for (auto& w : options.detector_windows)
+			cout << "detector window width by height: " << w.width << " x " << w.height << endl;
+		cout << "overlap NMS IOU thresh:             " << options.overlaps_nms.get_iou_thresh() << endl;
+		cout << "overlap NMS percent covered thresh: " << options.overlaps_nms.get_percent_covered_thresh() << endl;
+		
 		net_type net(options);
+		
+		
 		net.subnet().layer_details().set_num_filters(options.detector_windows.size());
 		return net;
 	}
