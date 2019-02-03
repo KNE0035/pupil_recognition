@@ -9,7 +9,6 @@ class MmodDatasetLoader
 {
 private:
 	int bufferSize;
-	
 	int lastIndexInDataset = 0;
 	dlib::image_dataset_metadata::dataset metadata;
 	string imageDatasetDirectory;
@@ -19,6 +18,7 @@ public:
 	void loadDatasetPart(std::vector<matrix<rgb_pixel>>& images, std::vector<std::vector<mmod_rect>>& object_locations);
 	std::vector<std::vector<mmod_rect>> getAllMmodRects();
 	
+	bool isEnd();
 
 	void resetLoader();
 	~MmodDatasetLoader();

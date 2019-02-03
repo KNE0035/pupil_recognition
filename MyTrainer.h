@@ -44,7 +44,6 @@ public:
 			std::vector<training_label_type> labels;
 			
 			obtaionNextBatchOfTrainingDataAndLabels(data, labels);
-
 			trainer.train_one_step(data, labels);
 		}
 

@@ -13,10 +13,16 @@ MmodDatasetLoader::~MmodDatasetLoader() {
 
 }
 
+bool MmodDatasetLoader::isEnd() {
+	return lastIndexInDataset >= metadata.images.size();
+}
+
 void MmodDatasetLoader::loadDatasetPart(std::vector<matrix<rgb_pixel>>& images, std::vector<std::vector<mmod_rect> >& object_locations) {
 	matrix<rgb_pixel> img;
 	std::vector<mmod_rect> rects;
-	
+	images.clear();
+	object_locations.clear();
+
 	int i = lastIndexInDataset;
 	for (int bufferIndex = 0; i < metadata.images.size() && bufferIndex < this->bufferSize; ++i, ++bufferIndex)
 	{
@@ -32,7 +38,7 @@ void MmodDatasetLoader::loadDatasetPart(std::vector<matrix<rgb_pixel>>& images, 
 		images.push_back(std::move(img));
 		object_locations.push_back(std::move(rects));
 	}
-	lastIndexInDataset = i + 1;
+	lastIndexInDataset = i;
 }
 
 std::vector<std::vector<mmod_rect>> MmodDatasetLoader::getAllMmodRects() {

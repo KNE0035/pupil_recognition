@@ -27,19 +27,19 @@ public:
 		bool cropperRandomlyFlip,
 		int cropperMaxRotationDegrees,
 		bool verboseMode,
-		MmodDatasetLoader* mmodDataLoader) : MyTrainer<net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, verboseMode)
+		MmodDatasetLoader* mmodDataLoader,
+		int batchSize) : MyTrainer<net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, verboseMode)
 	{
 		this->mmodDataLoader = mmodDataLoader;
 		this->chipDims = normalizedChipDims;
-		this->detectorWindowTargerSize = detectorWindowTargetSize;
+		this->detectorWindowTargetSize = detectorWindowTargetSize;
 		this->detectorWindowMinTargetSize = detectorWindowMinTargetSize;
-
-		cropper = new random_cropper();
-		cropper->set_randomly_flip(false);
-		cropper->set_chip_dims(*this->chipDims);
-
-		cropper->set_min_object_size(this->detectorWindowTargerSize, this->detectorWindowMinTargetSize);
-		cropper->set_max_rotation_degrees(0);
+		this->batchSize = batchSize;
+		this->cropper = new random_cropper();
+		this->cropper->set_chip_dims(*this->chipDims);
+		this->cropper->set_max_rotation_degrees(2);
+		this->cropper->set_randomly_flip(cropperRandomlyFlip);
+		this->cropper->set_min_object_size(this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
 	}
 
 	~MmodTrainer() {
@@ -47,54 +47,34 @@ public:
 		delete this->cropper;
 	}
 
-protected:
+private:
 	chip_dims* chipDims;
-	int detectorWindowTargerSize;
+	int detectorWindowTargetSize;
 	int detectorWindowMinTargetSize;
+	std::vector<matrix<rgb_pixel>> lastImagesToTrain;
+	std::vector<std::vector<mmod_rect>> lastMmodBoxes;
+	bool cycleDataset = false;
+	int batchSize;
+
 public:
 	MmodDatasetLoader* mmodDataLoader;
 	random_cropper* cropper;
 
 	void obtaionNextBatchOfTrainingDataAndLabels(std::vector<input_type>& data, std::vector<training_label_type>& labels) {
-		std::vector<matrix<rgb_pixel>> imagesToTrain;
-		std::vector<std::vector<mmod_rect>> mmodBoxes;
-
-		MmodTrainer::mmodDataLoader->loadDatasetPart(imagesToTrain, mmodBoxes);
-
-		if (imagesToTrain.size() == 0) {
+		if (!MmodTrainer::mmodDataLoader->isEnd()) {
+			MmodTrainer::mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
+		}
+		else if (cycleDataset) {
 			MmodTrainer::mmodDataLoader->resetLoader();
-			MmodTrainer::mmodDataLoader->loadDatasetPart(imagesToTrain, mmodBoxes);
+			MmodTrainer::mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
 		}
 
-		//cropTrainingData(imagesToTrain, mmodBoxes);
-		preprocessTrainingData(imagesToTrain, mmodBoxes);
-
-		data = imagesToTrain;
-		labels = mmodBoxes;
-	}
-
-	void cropTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {
-		std::vector<matrix<rgb_pixel>> crops;
-		std::vector<std::vector<mmod_rect>> crop_boxes;
-
-		/*image_window win;
-		win.clear_overlay();
-		win.set_image(imagesToTrain[0]);*/
-
-		(*cropper)(imagesToTrain.size(), imagesToTrain, mmodBoxes, crops, crop_boxes);
-
-		/*image_window win2;
-		win2.clear_overlay();
-		win2.set_image(crops[0]);*/
-		
-		//cin.get();
-
-		imagesToTrain = crops;
-		mmodBoxes = crop_boxes;
+		(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
+		preprocessTrainingData(data, labels);
 	}
 
 	net_type getNetWithSpecificOptions() {
-		mmod_options options(mmodDataLoader->getAllMmodRects(), this->detectorWindowTargerSize, this->detectorWindowMinTargetSize);
+		mmod_options options(mmodDataLoader->getAllMmodRects(), this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
 		
 		cout << "num detector windows: " << options.detector_windows.size() << endl;
 		for (auto& w : options.detector_windows)
