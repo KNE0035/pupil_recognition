@@ -36,10 +36,12 @@ public:
 		this->detectorWindowMinTargetSize = detectorWindowMinTargetSize;
 		this->batchSize = batchSize;
 		this->cropper = new random_cropper();
+		this->cropper->set_seed(time(0));
 		this->cropper->set_chip_dims(*this->chipDims);
-		this->cropper->set_max_rotation_degrees(2);
+		this->cropper->set_max_rotation_degrees(cropperMaxRotationDegrees);
 		this->cropper->set_randomly_flip(cropperRandomlyFlip);
 		this->cropper->set_min_object_size(this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
+		this->cropper->set_background_crops_fraction(1.0);
 	}
 
 	~MmodTrainer() {
@@ -70,6 +72,49 @@ public:
 		}
 
 		(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
+
+		int minRectWidth = 500;
+		int minRectHeight = 500;
+		int imgWidth = 1000;
+		int minImgHeight = 1000;
+
+		int maxHe = 0;
+		int maxwi = 0;
+
+		/*dataLoader->loadDatasetPart(imagesToTrainsss, mmodBoxesss);
+
+		for (matrix<rgb_pixel> img : imagesToTrainsss) {
+			cout << img.nr() << " * " << img.nc() << endl;
+		}*/
+
+		for (std::vector<mmod_rect> rects1 : labels) {
+			for (mmod_rect rect : rects1) {
+				int width = rect.rect.width();
+				int height = rect.rect.height();
+
+				if (minRectWidth > width) {
+					minRectWidth = width;
+				}
+
+				if (minRectHeight > height) {
+					minRectHeight = height;
+				}
+
+				if (maxHe < height) {
+					maxHe = height;
+				}
+
+				if (maxwi < width) {
+					maxwi = width;
+				}
+			}
+		}
+
+		printf("minheight: %d \n", minRectHeight);
+		printf("minWidth: %d \n", minRectWidth);
+		printf("maxheight: %d \n", maxHe);
+		printf("maxWidth: %d \n", maxwi);
+
 		preprocessTrainingData(data, labels);
 	}
 

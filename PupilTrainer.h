@@ -39,7 +39,7 @@ public:
 		double minimumLearningRate,
 		int iterationWithoutProgressTreshold,
 		bool verboseMode,
-		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(150, 150)), 23, 23, false, 0, verboseMode, mmodDataLoader, 100)
+		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(300, 300)), 34, 34, false, 0, verboseMode, mmodDataLoader, 100)
 		//: MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(155, 155)), 14, 14, false, 0, verboseMode, mmodDataLoader)
 	{}
 

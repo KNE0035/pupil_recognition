@@ -86,16 +86,27 @@ int main(int argc, char** argv) try
 	image_window win, win2;
 	for (int i = 0; i < imagesToTrain.size(); ++i)
 	{
+		std::vector<matrix<rgb_pixel>> imagesToTrain1;
+		std::vector<std::vector<mmod_rect>> mmodBoxes1;
+
+		std::vector<matrix<rgb_pixel>> imagesToTrain2;
+		std::vector<std::vector<mmod_rect>> mmodBoxes2;
+
+		imagesToTrain1.push_back(imagesToTrain[i]);
+		mmodBoxes1.push_back(mmodBoxes[i]);
+
 		matrix<rgb_pixel> oneImage = imagesToTrain[i];
-		pyramid_up(oneImage);
+		(*(pupilTrainer.cropper))(1, imagesToTrain1, mmodBoxes1, imagesToTrain2, mmodBoxes2);
+
 		pyramid_up(oneImage);
 		//pyramid_up(oneImage);
-		auto dets = net(oneImage);
+		//pyramid_up(oneImage);
+		auto dets = net(imagesToTrain2[0]);
 		win.clear_overlay();
 		win2.clear_overlay();
-		win2.set_image(oneImage);
-		//win2.add_overlay(mmodBoxes[i][0].rect);
-		win.set_image(oneImage);
+		win2.set_image(imagesToTrain2[0]);
+		win2.add_overlay(mmodBoxes2[0][0].rect);
+		win.set_image(imagesToTrain2[0]);
 		
 		for (auto&& d : dets) {
 			win.add_overlay(d);
@@ -105,7 +116,7 @@ int main(int argc, char** argv) try
 			//cin.get();
 		}
 			
-
+		cin.get();
 		cout << "Hit enter to process the next image." << endl;
 	}
 	
