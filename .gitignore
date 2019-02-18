@@ -7,5 +7,4 @@ build
 dist
 *.egg-info/
 
-/training_images
 /faces
