@@ -1,11 +1,5 @@
-**/.idea
-*~
-*.swp
-*.o
-*.so
-build
-dist
-*.egg-info/
+﻿################################################################################
+# Tento soubor .gitignore byl automaticky vytvořen aplikací Microsoft(R) Visual Studio.
+################################################################################
 
-/training_images
-/faces
+/build/.vs/pupil_detection/v14/.suo
