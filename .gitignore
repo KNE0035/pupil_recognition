@@ -53,7 +53,4 @@ dist
 /training_images/.vs/training_images/v15/.suo
 /training_images/.vs/slnx.sqlite
 /training_images/.vs/ProjectSettings.json
-/.vs/slnx.sqlite
-/.vs/pupil_recognition/v15/Browse.VC.opendb
-/.vs/pupil_recognition/v15/Browse.VC.db
-/.vs/ProjectSettings.json
+/.vs
