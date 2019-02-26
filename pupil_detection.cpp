@@ -9,7 +9,7 @@ using namespace dlib;
 
 int main(int argc, char** argv) try
 {
-	MmodDatasetLoader* dataLoader = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_square.xml", 10000);
+	MmodDatasetLoader* dataLoader = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_square_with_borders.xml", 10000);
 
 	std::vector<std::vector<mmod_rect>> rects;
 	rects = dataLoader->getAllMmodRects();
@@ -74,7 +74,7 @@ int main(int argc, char** argv) try
 	std::vector<std::vector<mmod_rect>> mmodBoxes;
 
 
-	MmodDatasetLoader* dataLoader2 = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_square.xml", 1300);
+	MmodDatasetLoader* dataLoader2 = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_square_with_borders.xml", 1300);
 	dataLoader2->loadDatasetPart(imagesToTrain, mmodBoxes);
 	int count = 0;
 
@@ -84,7 +84,10 @@ int main(int argc, char** argv) try
 	matrix<rgb_pixel> img;
 
 	image_window win, win2;
-	for (int i = 0; i < imagesToTrain.size(); ++i)
+
+	int offset = 83;
+
+	for (int i = offset; i < imagesToTrain.size(); ++i)
 	{
 		std::vector<matrix<rgb_pixel>> imagesToTrain1;
 		std::vector<std::vector<mmod_rect>> mmodBoxes1;
@@ -105,18 +108,21 @@ int main(int argc, char** argv) try
 		win.clear_overlay();
 		win2.clear_overlay();
 		win2.set_image(imagesToTrain2[0]);
+
 		win2.add_overlay(mmodBoxes2[0][0].rect);
 		win.set_image(imagesToTrain2[0]);
 		
-		for (auto&& d : dets) {
+		/*for (auto&& d : dets) {
 			win.add_overlay(d);
 			count++;
-		}
+		}*/
 		if (dets.size() != 0) {
 			//cin.get();
 		}
-			
+
+		cout << i + 1 << ". obrazek" << endl;
 		cin.get();
+
 		cout << "Hit enter to process the next image." << endl;
 	}
 	

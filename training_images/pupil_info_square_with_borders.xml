@@ -1,0 +1,314 @@
+<dataset>
+  <title>Training Dataset</title>
+  <images>
+    <image file="s0012/s0012_07649_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="59" width="23" />
+    </image>
+    <image file="s0012/s0012_07650_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07651_0_0_1_1_0_02.png">
+      <box height="22" left="66" top="61" width="22" />
+    </image>
+    <image file="s0012/s0012_07652_0_0_1_1_0_02.png">
+      <box height="22" left="49" top="63" width="22" />
+    </image>
+    <image file="s0012/s0012_07654_0_0_1_1_0_02.png">
+      <box height="22" left="49" top="63" width="22" />
+    </image>
+    <image file="s0012/s0012_07656_0_0_1_1_0_02.png">
+      <box height="22" left="49" top="62" width="22" />
+    </image>
+    <image file="s0012/s0012_07658_0_0_1_1_0_02.png">
+      <box height="22" left="49" top="64" width="22" />
+    </image>
+    <image file="s0012/s0012_07659_0_0_1_1_0_02.png">
+      <box height="22" left="65" top="60" width="22" />
+    </image>
+    <image file="s0012/s0012_07661_0_0_1_1_0_02.png">
+      <box height="24" left="64" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07663_0_0_1_1_0_02.png">
+      <box height="23" left="66" top="58" width="23" />
+    </image>
+    <image file="s0012/s0012_07665_0_0_1_1_0_02.png">
+      <box height="24" left="66" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07667_0_0_1_1_0_02.png">
+      <box height="24" left="64" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07668_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="64" width="23" />
+    </image>
+    <image file="s0012/s0012_07670_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07653_0_0_1_1_0_02.png">
+      <box height="22" left="64" top="60" width="22" />
+    </image>
+    <image file="s0012/s0012_07662_0_0_1_1_0_02.png">
+      <box height="23" left="50" top="64" width="23" />
+    </image>
+    <image file="s0012/s0012_07660_0_0_1_1_0_02.png">
+      <box height="22" left="48" top="63" width="22" />
+    </image>
+    <image file="s0012/s0012_07664_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07657_0_0_1_1_0_02.png">
+      <box height="22" left="65" top="60" width="22" />
+    </image>
+    <image file="s0012/s0012_07655_0_0_1_1_0_02.png">
+      <box height="23" left="67" top="59" width="23" />
+    </image>
+    <image file="s0012/s0012_07666_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07669_0_0_1_1_0_02.png">
+      <box height="23" left="64" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07671_0_0_1_1_0_02.png">
+      <box height="24" left="65" top="58" width="24" />
+    </image>
+    <image file="s0012/s0012_07672_0_0_1_1_0_02.png">
+      <box height="24" left="46" top="60" width="24" />
+    </image>
+    <image file="s0012/s0012_07673_0_0_1_1_0_02.png">
+      <box height="24" left="65" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07674_0_0_1_1_0_02.png">
+      <box height="23" left="47" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07675_0_0_1_1_0_02.png">
+      <box height="24" left="65" top="57" width="24" />
+    </image>
+    <image file="s0012/s0012_07676_0_0_1_1_0_02.png">
+      <box height="23" left="45" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07678_0_0_1_1_0_02.png">
+      <box height="24" left="46" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07679_0_0_1_1_0_02.png">
+      <box height="24" left="67" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07680_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="62" width="24" />
+    </image>
+    <image file="s0012/s0012_07677_0_0_1_1_0_02.png">
+      <box height="22" left="66" top="59" width="22" />
+    </image>
+    <image file="s0012/s0012_07681_0_0_1_1_0_02.png">
+      <box height="24" left="66" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07682_0_0_1_1_0_02.png">
+      <box height="25" left="47" top="62" width="25" />
+    </image>
+    <image file="s0012/s0012_07683_0_0_1_1_0_02.png">
+      <box height="24" left="65" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07684_0_0_1_1_0_02.png">
+      <box height="25" left="46" top="60" width="25" />
+    </image>
+    <image file="s0012/s0012_07685_0_0_1_1_0_02.png">
+      <box height="24" left="64" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07686_0_0_1_1_0_02.png">
+      <box height="25" left="46" top="60" width="25" />
+    </image>
+    <image file="s0012/s0012_07687_0_0_1_1_0_02.png">
+      <box height="24" left="66" top="59" width="24" />
+    </image>
+    <image file="s0012/s0012_07688_0_0_1_1_0_02.png">
+      <box height="26" left="48" top="61" width="26" />
+    </image>
+    <image file="s0012/s0012_07689_0_0_1_1_0_02.png">
+      <box height="24" left="67" top="58" width="24" />
+    </image>
+    <image file="s0012/s0012_07690_0_0_1_1_0_02.png">
+      <box height="26" left="46" top="62" width="26" />
+    </image>
+    <image file="s0012/s0012_07691_0_0_1_1_0_02.png">
+      <box height="23" left="66" top="60" width="23" />
+    </image>
+    <image file="s0012/s0012_07692_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="62" width="24" />
+    </image>
+    <image file="s0012/s0012_07693_0_0_1_1_0_02.png">
+      <box height="23" left="67" top="60" width="23" />
+    </image>
+    <image file="s0012/s0012_07694_0_0_1_1_0_02.png">
+      <box height="24" left="46" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07695_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07696_0_0_1_1_0_02.png">
+      <box height="24" left="48" top="62" width="24" />
+    </image>
+    <image file="s0012/s0012_07697_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="59" width="23" />
+    </image>
+    <image file="s0012/s0012_07698_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07699_0_0_1_1_0_02.png">
+      <box height="23" left="67" top="60" width="23" />
+    </image>
+    <image file="s0012/s0012_07701_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="60" width="23" />
+    </image>
+    <image file="s0012/s0012_07700_0_0_1_1_0_02.png">
+      <box height="24" left="48" top="63" width="24" />
+    </image>
+    <image file="s0012/s0012_07702_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="62" width="24" />
+    </image>
+    <image file="s0012/s0012_07703_0_0_1_1_0_02.png">
+      <box height="23" left="66" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07704_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07706_0_0_1_1_0_02.png">
+      <box height="25" left="47" top="62" width="25" />
+    </image>
+    <image file="s0012/s0012_07707_0_0_1_1_0_02.png">
+      <box height="23" left="64" top="63" width="23" />
+    </image>
+    <image file="s0012/s0012_07708_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="62" width="24" />
+    </image>
+    <image file="s0012/s0012_07709_0_0_1_1_0_02.png">
+      <box height="24" left="65" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07711_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="60" width="23" />
+    </image>
+    <image file="s0012/s0012_07710_0_0_1_1_0_02.png">
+      <box height="23" left="47" top="63" width="23" />
+    </image>
+    <image file="s0012/s0012_07705_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07712_0_0_1_1_0_02.png">
+      <box height="24" left="49" top="63" width="24" />
+    </image>
+    <image file="s0012/s0012_07713_0_0_1_1_0_02.png">
+      <box height="23" left="66" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07714_0_0_1_1_0_02.png">
+      <box height="24" left="46" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07715_0_0_1_1_0_02.png">
+      <box height="22" left="65" top="60" width="22" />
+    </image>
+    <image file="s0012/s0012_07716_0_0_1_1_0_02.png">
+      <box height="23" left="47" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07717_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="60" width="23" />
+    </image>
+    <image file="s0012/s0012_07718_0_0_1_1_0_02.png">
+      <box height="23" left="44" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07719_0_0_1_1_0_02.png">
+      <box height="23" left="66" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07720_0_0_1_1_0_02.png">
+      <box height="23" left="47" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07721_0_0_1_1_0_02.png">
+      <box height="23" left="64" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07722_0_0_1_1_0_02.png">
+      <box height="23" left="47" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07723_0_0_1_1_0_02.png">
+      <box height="23" left="64" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07724_0_0_1_1_0_02.png">
+      <box height="25" left="48" top="62" width="25" />
+    </image>
+    <image file="s0012/s0012_07725_0_0_1_1_0_02.png">
+      <box height="24" left="67" top="60" width="24" />
+    </image>
+    <image file="s0012/s0012_07726_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="63" width="23" />
+    </image>
+    <image file="s0012/s0012_07727_0_0_1_1_0_02.png">
+      <box height="24" left="66" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07728_0_0_1_1_0_02.png">
+      <box height="23" left="49" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07729_0_0_1_1_0_02.png">
+      <box height="24" left="66" top="61" width="24" />
+    </image>
+    <image file="s0012/s0012_07730_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07731_0_0_1_1_0_02.png">
+      <box height="25" left="66" top="61" width="25" />
+    </image>
+    <image file="s0012/s0012_07732_0_0_1_1_0_02.png">
+      <box height="23" left="44" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07733_0_0_1_1_0_02.png">
+      <box height="23" left="66" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07734_0_0_1_1_0_02.png">
+      <box height="23" left="47" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07735_0_0_1_1_0_02.png">
+      <box height="24" left="66" top="62" width="24" />
+    </image>
+    <image file="s0012/s0012_07736_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07737_0_0_1_1_0_02.png">
+      <box height="23" left="66" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07738_0_0_1_1_0_02.png">
+      <box height="24" left="47" top="62" width="24" />
+    </image>
+    <image file="s0012/s0012_07739_0_0_1_1_0_02.png">
+      <box height="24" left="67" top="63" width="24" />
+    </image>
+    <image file="s0012/s0012_07740_0_0_1_1_0_02.png">
+      <box height="23" left="47" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07741_0_0_1_1_0_02.png">
+      <box height="23" left="67" top="61" width="23" />
+    </image>
+    <image file="s0012/s0012_07742_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07743_0_0_1_1_0_02.png">
+      <box height="23" left="65" top="62" width="23" />
+    </image>
+    <image file="s0012/s0012_07744_0_0_1_1_0_02.png">
+      <box height="23" left="48" top="63" width="23" />
+    </image>
+    <image file="s0012/s0012_07745_0_0_1_1_0_02.png">
+      <box height="22" left="64" top="59" width="22" />
+    </image>
+    <image file="s0012/s0012_07746_0_0_1_1_0_02.png">
+      <box height="22" left="46" top="62" width="22" />
+    </image>
+    <image file="s0012/s0012_07747_0_0_1_1_0_02.png">
+      <box height="22" left="61" top="57" width="22" />
+    </image>
+    <image file="s0012/s0012_07748_0_0_1_1_0_02.png">
+      <box height="22" left="39" top="60" width="22" />
+    </image>
+    <image file="s0012/s0012_07749_0_0_1_1_0_02.png">
+      <box height="24" left="59" top="58" width="24" />
+    </image>
+    <image file="s0012/s0012_07750_0_0_1_1_0_02.png">
+      <box height="23" left="45" top="63" width="23" />
+    </image>
+    <image file="s0012/s0012_07751_0_0_1_1_0_02.png">
+      <box height="24" left="59" top="58" width="24" />
+    </image>
+  </images>
+</dataset>
