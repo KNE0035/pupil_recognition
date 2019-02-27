@@ -85,7 +85,7 @@ int main(int argc, char** argv) try
 
 	image_window win, win2;
 
-	int offset = 83;
+	int offset = 139;
 
 	for (int i = offset; i < imagesToTrain.size(); ++i)
 	{
@@ -101,24 +101,24 @@ int main(int argc, char** argv) try
 		matrix<rgb_pixel> oneImage = imagesToTrain[i];
 		(*(pupilTrainer.cropper))(1, imagesToTrain1, mmodBoxes1, imagesToTrain2, mmodBoxes2);
 
-		pyramid_up(oneImage);
 		//pyramid_up(oneImage);
 		//pyramid_up(oneImage);
-		auto dets = net(imagesToTrain2[0]);
+		//pyramid_up(oneImage);
+		//auto dets = net(imagesToTrain1[0]);
 		win.clear_overlay();
 		win2.clear_overlay();
 		win2.set_image(imagesToTrain2[0]);
 
 		win2.add_overlay(mmodBoxes2[0][0].rect);
-		win.set_image(imagesToTrain2[0]);
+		win.set_image(imagesToTrain1[0]);
 		
 		/*for (auto&& d : dets) {
 			win.add_overlay(d);
 			count++;
 		}*/
-		if (dets.size() != 0) {
+		/*if (dets.size() != 0) {
 			//cin.get();
-		}
+		}*/
 
 		cout << i + 1 << ". obrazek" << endl;
 		cin.get();
