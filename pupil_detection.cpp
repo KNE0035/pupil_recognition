@@ -67,8 +67,8 @@ int main(int argc, char** argv) try
 
 	pupilTrainer.obtaionNextBatchOfTrainingDataAndLabels(imagesToTrainsss, mmodBoxesss);
 
-	test_box_overlap overlap_tester(0.5);
-	cout << "training results: " << test_object_detection_function(net, imagesToTrainsss, mmodBoxesss, overlap_tester) << endl;
+	//test_box_overlap overlap_tester(0.5);
+	//cout << "training results: " << test_object_detection_function(net, imagesToTrainsss, mmodBoxesss, overlap_tester) << endl;
 
 	std::vector<matrix<rgb_pixel>> imagesToTrain;
 	std::vector<std::vector<mmod_rect>> mmodBoxes;
@@ -85,7 +85,7 @@ int main(int argc, char** argv) try
 
 	image_window win, win2;
 
-	int offset = 139;
+	int offset = 160;
 
 	for (int i = offset; i < imagesToTrain.size(); ++i)
 	{
