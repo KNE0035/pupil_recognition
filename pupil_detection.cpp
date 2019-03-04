@@ -9,7 +9,7 @@ using namespace dlib;
 
 int main(int argc, char** argv) try
 {
-	MmodDatasetLoader* dataLoader = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_square_with_borders.xml", 10000);
+	MmodDatasetLoader* dataLoader = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_square_with_borders.xml", 1000);
 
 	std::vector<std::vector<mmod_rect>> rects;
 	rects = dataLoader->getAllMmodRects();
@@ -21,14 +21,8 @@ int main(int argc, char** argv) try
 	int maxHe = 0;
 	int maxwi = 0;
 
-	std::vector<matrix<rgb_pixel>> imagesToTrainsss;
-	std::vector<std::vector<mmod_rect>> mmodBoxesss;
-
-	/*dataLoader->loadDatasetPart(imagesToTrainsss, mmodBoxesss);
-
-	for (matrix<rgb_pixel> img : imagesToTrainsss) {
-		cout << img.nr() << " * " << img.nc() << endl;
-	}*/
+	std::vector<matrix<rgb_pixel>> imagesToTrain;
+	std::vector<std::vector<mmod_rect>> mmodBoxes;
 
 	for (std::vector<mmod_rect> rects1 : rects) {
 		for (mmod_rect rect : rects1) {
@@ -58,67 +52,37 @@ int main(int argc, char** argv) try
 	printf("maxheight: %d \n", maxHe);
 	printf("maxWidth: %d \n", maxwi);
 
-	PupilTrainer pupilTrainer = PupilTrainer(0.1, "pupil_train_sync", "mmod_pupil_network_8000_iter_new_net_cropper_batch.dat", 1e-6, 8000, true, dataLoader);
-	//23 zatim nejlepsi
-	//pupilTrainer.train();
+	PupilTrainer pupilTrainer = PupilTrainer(0.1, "pupil_train_sync", "pupil_network_downsampler_off_8000_cycle.dat", 1e-6, 8000, true, dataLoader);
+	pupilTrainer.train();
 
 	pupil_detection_net_type net;
-	deserialize("mmod_pupil_network_8000_iter_new_net_cropper_batch.dat") >> net;
+	deserialize("pupil_network_downsampler_off_8000_cycle.dat") >> net;
+	dataLoader->loadDatasetPart(imagesToTrain, mmodBoxes);
 
-	pupilTrainer.obtaionNextBatchOfTrainingDataAndLabels(imagesToTrainsss, mmodBoxesss);
-
-	//test_box_overlap overlap_tester(0.5);
-	//cout << "training results: " << test_object_detection_function(net, imagesToTrainsss, mmodBoxesss, overlap_tester) << endl;
-
-	std::vector<matrix<rgb_pixel>> imagesToTrain;
-	std::vector<std::vector<mmod_rect>> mmodBoxes;
-
-
-	MmodDatasetLoader* dataLoader2 = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_square_with_borders.xml", 1300);
-	dataLoader2->loadDatasetPart(imagesToTrain, mmodBoxes);
+	cout << "training results: " << test_object_detection_function(net, imagesToTrain, mmodBoxes) << endl;
 	int count = 0;
-
 	
-	pupilTrainer.obtaionNextBatchOfTrainingDataAndLabels(imagesToTrainsss, mmodBoxesss);
-
-	matrix<rgb_pixel> img;
-
 	image_window win, win2;
-
-	int offset = 160;
+	int offset = 0;
 
 	for (int i = offset; i < imagesToTrain.size(); ++i)
 	{
-		std::vector<matrix<rgb_pixel>> imagesToTrain1;
-		std::vector<std::vector<mmod_rect>> mmodBoxes1;
-
-		std::vector<matrix<rgb_pixel>> imagesToTrain2;
-		std::vector<std::vector<mmod_rect>> mmodBoxes2;
-
-		imagesToTrain1.push_back(imagesToTrain[i]);
-		mmodBoxes1.push_back(mmodBoxes[i]);
-
-		matrix<rgb_pixel> oneImage = imagesToTrain[i];
-		(*(pupilTrainer.cropper))(1, imagesToTrain1, mmodBoxes1, imagesToTrain2, mmodBoxes2);
-
+		//pyramid_up(imagesToTrain[i]);
 		//pyramid_up(oneImage);
 		//pyramid_up(oneImage);
-		//pyramid_up(oneImage);
-		//auto dets = net(imagesToTrain1[0]);
-		win.clear_overlay();
-		win2.clear_overlay();
-		win2.set_image(imagesToTrain2[0]);
-
-		win2.add_overlay(mmodBoxes2[0][0].rect);
-		win.set_image(imagesToTrain1[0]);
 		
-		/*for (auto&& d : dets) {
+		auto dets = net(imagesToTrain[i]);
+		win.clear_overlay();
+		win.set_image(imagesToTrain[i]);
+		for (auto&& d : dets) {
 			win.add_overlay(d);
 			count++;
-		}*/
-		/*if (dets.size() != 0) {
-			//cin.get();
-		}*/
+		}
+
+		win2.clear_overlay();
+		win2.set_image(imagesToTrain[i]);
+		win2.add_overlay(mmodBoxes[i][0].rect);
+		
 
 		cout << i + 1 << ". obrazek" << endl;
 		cin.get();

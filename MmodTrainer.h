@@ -30,6 +30,7 @@ public:
 		MmodDatasetLoader* mmodDataLoader,
 		int batchSize) : MyTrainer<net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, verboseMode)
 	{
+		mmodDataLoader->resetLoader();
 		this->mmodDataLoader = mmodDataLoader;
 		this->chipDims = normalizedChipDims;
 		this->detectorWindowTargetSize = detectorWindowTargetSize;
@@ -40,8 +41,8 @@ public:
 		this->cropper->set_chip_dims(*this->chipDims);
 		this->cropper->set_max_rotation_degrees(cropperMaxRotationDegrees);
 		this->cropper->set_randomly_flip(cropperRandomlyFlip);
-		this->cropper->set_min_object_size(this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
-		this->cropper->set_background_crops_fraction(1.0);
+		this->cropper->set_min_object_size(this->detectorWindowTargetSize - 1, this->detectorWindowMinTargetSize - 1);
+		this->cropper->set_background_crops_fraction(0.2);
 	}
 
 	~MmodTrainer() {
@@ -73,19 +74,13 @@ public:
 
 		(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
 
-		int minRectWidth = 500;
+		/*int minRectWidth = 500;
 		int minRectHeight = 500;
 		int imgWidth = 1000;
 		int minImgHeight = 1000;
 
 		int maxHe = 0;
 		int maxwi = 0;
-
-		/*dataLoader->loadDatasetPart(imagesToTrainsss, mmodBoxesss);
-
-		for (matrix<rgb_pixel> img : imagesToTrainsss) {
-			cout << img.nr() << " * " << img.nc() << endl;
-		}*/
 
 		for (std::vector<mmod_rect> rects1 : labels) {
 			for (mmod_rect rect : rects1) {
@@ -113,9 +108,9 @@ public:
 		printf("minheight: %d \n", minRectHeight);
 		printf("minWidth: %d \n", minRectWidth);
 		printf("maxheight: %d \n", maxHe);
-		printf("maxWidth: %d \n", maxwi);
+		printf("maxWidth: %d \n", maxwi);*/
 
-		preprocessTrainingData(data, labels);
+		//preprocessTrainingData(data, labels);
 	}
 
 	net_type getNetWithSpecificOptions() {
@@ -128,7 +123,6 @@ public:
 		cout << "overlap NMS percent covered thresh: " << options.overlaps_nms.get_percent_covered_thresh() << endl;
 		
 		net_type net(options);
-		
 		
 		net.subnet().layer_details().set_num_filters(options.detector_windows.size());
 		return net;
