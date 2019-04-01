@@ -1,0 +1,11 @@
+<dataset>
+  <title>Training Dataset</title>
+  <images>
+     <image file="s0012/s0012_07853_0_0_1_1_0_02.png">
+      <box height="20" left="55" top="59" width="20" />
+    </image>
+    <image file="s0012/s0012_04560_0_0_1_2_1_03.png">
+      <box height="7" left="24" top="36" width="7" />
+    </image>
+  </images>
+</dataset>

@@ -215,9 +215,8 @@ namespace dlib
             DLIB_CASSERT(std::distance(dbegin, dend) > 0);
 
             print_periodic_verbose_status();
-            sync_to_disk();
-            send_job(false, dbegin, dend, lbegin);
-
+			sync_to_disk();
+			send_job(false, dbegin, dend, lbegin);
             ++train_one_step_calls;
         }
 
@@ -1148,7 +1147,7 @@ namespace dlib
             const auto prev_dev = dlib::cuda::get_device();
             for (size_t i = 0; i < devs; ++i)
             {
-                dlib::cuda::set_device(devices[i]->device_id);
+				dlib::cuda::set_device(devices[i]->device_id);
 
                 size_t start = i*block_size;
                 size_t stop  = std::min(num, start+block_size);
@@ -1156,7 +1155,7 @@ namespace dlib
                 if (start < stop)
                 {
                     devices[i]->net.to_tensor(dbegin+start, dbegin+stop, job.t[i]);
-                    job.labels[i].assign(lbegin+start, lbegin+stop);
+					job.labels[i].assign(lbegin+start, lbegin+stop);
                     job.have_data[i] = true;
                 }
                 else
@@ -1164,7 +1163,6 @@ namespace dlib
                     job.have_data[i] = false;
                 }
             }
-
             dlib::cuda::set_device(prev_dev);
             job_pipe.enqueue(job);
         }

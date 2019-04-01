@@ -6,6 +6,7 @@
 build
 dist
 *.egg-info/
+opencv
 
 /faces
 /training_images/s0001

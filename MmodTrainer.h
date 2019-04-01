@@ -8,7 +8,6 @@
 #include "MmodDatasetLoader.h"
 
 #include <dlib/data_io.h>
-#include <dlib/gui_widgets.h>
 #include <dlib/image_transforms.h>
 
 
@@ -22,8 +21,6 @@ public:
 		double minimumLearningRate,
 		int iterationWithoutProgressTreshold,
 		chip_dims* normalizedChipDims,
-		int detectorWindowTargetSize,
-		int detectorWindowMinTargetSize,
 		bool cropperRandomlyFlip,
 		int cropperMaxRotationDegrees,
 		bool verboseMode,
@@ -33,15 +30,12 @@ public:
 		mmodDataLoader->resetLoader();
 		this->mmodDataLoader = mmodDataLoader;
 		this->chipDims = normalizedChipDims;
-		this->detectorWindowTargetSize = detectorWindowTargetSize;
-		this->detectorWindowMinTargetSize = detectorWindowMinTargetSize;
 		this->batchSize = batchSize;
 		this->cropper = new random_cropper();
 		this->cropper->set_seed(time(0));
 		this->cropper->set_chip_dims(*this->chipDims);
 		this->cropper->set_max_rotation_degrees(cropperMaxRotationDegrees);
 		this->cropper->set_randomly_flip(cropperRandomlyFlip);
-		this->cropper->set_min_object_size(this->detectorWindowTargetSize - 1, this->detectorWindowMinTargetSize - 1);
 		this->cropper->set_background_crops_fraction(0.2);
 	}
 
@@ -50,7 +44,7 @@ public:
 		delete this->cropper;
 	}
 
-private:
+protected:
 	chip_dims* chipDims;
 	int detectorWindowTargetSize;
 	int detectorWindowMinTargetSize;
@@ -58,21 +52,46 @@ private:
 	std::vector<std::vector<mmod_rect>> lastMmodBoxes;
 	bool cycleDataset = false;
 	int batchSize;
-
-public:
 	MmodDatasetLoader* mmodDataLoader;
 	random_cropper* cropper;
 
+public:
 	void obtaionNextBatchOfTrainingDataAndLabels(std::vector<input_type>& data, std::vector<training_label_type>& labels) {
-		if (!MmodTrainer::mmodDataLoader->isEnd()) {
-			MmodTrainer::mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
+		if (!mmodDataLoader->isEnd()) {
+			mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
+			preprocessTrainingData(lastImagesToTrain, lastMmodBoxes);
+			//(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
+			//lastImagesToTrain = data;
+			//lastMmodBoxes = labels;
+			//image_window win;
+
+			/*for (int i = 0; i < lastImagesToTrain.size(); ++i)
+			{
+				win.clear_overlay();
+				win.set_image(lastImagesToTrain[i]);
+				win.add_overlay(lastMmodBoxes[i][0].rect);
+				cin.get();
+			}*/
 		}
 		else if (cycleDataset) {
 			MmodTrainer::mmodDataLoader->resetLoader();
 			MmodTrainer::mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
 		}
 
+		//data = lastImagesToTrain;
+		//labels = lastMmodBoxes;
 		(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
+
+		/*image_window win;
+		for (int i = 0; i < data.size(); ++i)
+		{
+			win.clear_overlay();
+			win.set_image(data[i]);
+			if (labels[i].size() != 0) {
+				win.add_overlay(labels[i][0].rect);
+			}
+			cin.get();
+		}*/
 
 		/*int minRectWidth = 500;
 		int minRectHeight = 500;
@@ -114,7 +133,7 @@ public:
 	}
 
 	net_type getNetWithSpecificOptions() {
-		mmod_options options(mmodDataLoader->getAllMmodRects(), this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
+		mmod_options options(lastMmodBoxes, this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
 		
 		cout << "num detector windows: " << options.detector_windows.size() << endl;
 		for (auto& w : options.detector_windows)
