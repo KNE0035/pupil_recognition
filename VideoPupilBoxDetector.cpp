@@ -14,18 +14,19 @@ VideoPupilBoxDetector::VideoPupilBoxDetector(string pupilNetDatFilePath, string 
 
 std::vector<rectangle> VideoPupilBoxDetector::getBoundingBoxesFromImage(cv::Mat cvimg) {
 	std::vector<rectangle> pupilBoxes;
-	cv_image<bgr_pixel> dlibStructImg(cvimg);
+	cv_image <bgr_pixel> dlibStructImg(cvimg);
 	std::vector<rectangle> faces = this->frontalFaceDetector(dlibStructImg);
 
 	std::vector<full_object_detection> shapes;
 	for (unsigned long i = 0; i < faces.size(); ++i)
 		shapes.push_back(faceShapePredictor(dlibStructImg, faces[i]));
 	
-	int xOffset = 15;
-	int yOffsetUp = 15;
-	int yOffsetDown = 15;
+	int xOffset = 0;
+	int yOffsetUp = cvimg.rows * 0.05;
+	int yOffsetDown = cvimg.rows * 0.05;
 	
 	for (full_object_detection shape : shapes) {
+		faceDetectionNumber++;
 		rectangle leftEyeArea = rectangle(shape.part(36).x() - xOffset, 
 									     (shape.part(36).y() + shape.part(39).y()) * 0.5 - yOffsetUp, 
 									     shape.part(39).x() + xOffset, 
@@ -58,18 +59,15 @@ rectangle VideoPupilBoxDetector::getPupilBoxFromEyeArea(cv::Mat cvimg, rectangle
 
 	matrix<unsigned char> mat;
 	assign_image(mat, cvLeft);
-
-/*	int minHeight = 130;
-	while (mat.nr() < minHeight) {
+	int offset = 1107;
+	if (faceDetectionNumber % 31 == 0 && sampleNumber <= 1) {
+		sampleNumber++;
+		save_png(mat, "mySamples/sample" + to_string(sampleNumber + offset) + ".png");
+	}
+	
+	while (mat.nr() < MINIMUM_IMG_DIM_SIZE && mat.nc() < MINIMUM_IMG_DIM_SIZE) {
 		pyramid_up(mat);
-	}*/
-
-	pyramid_up(mat);
-	pyramid_up(mat);
-	pyramid_up(mat);
-	pyramid_up(mat);
-
-
+	}
 	double enlargeRatio = 1 / round(mat.nr() / (double)eyeArea.height());
 
 	matrix<rgb_pixel> coloredMat;
@@ -81,18 +79,18 @@ rectangle VideoPupilBoxDetector::getPupilBoxFromEyeArea(cv::Mat cvimg, rectangle
 	
 	/*image_window win;
 	win.clear_overlay();
-	win.set_image(mat);
+	win.set_image(coloredMat);
 	win.add_overlay(searchedRect);
 	cin.get();
 	printf("%d, %d", searchedRect.width(), searchedRect.height());*/
 
 	if (dets.size() > 0) {
 		searchedRect = dets[0];
-		printf("asf");
+		/*printf("asf");
 
-		/*image_window win;
+		image_window win;
 		win.clear_overlay();
-		win.set_image(mat);
+		win.set_image(coloredMat);
 		win.add_overlay(searchedRect);
 		cin.get();
 		printf("%d, %d", searchedRect.width(), searchedRect.height());*/

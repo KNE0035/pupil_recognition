@@ -37,6 +37,7 @@ public:
 		this->cropper->set_max_rotation_degrees(cropperMaxRotationDegrees);
 		this->cropper->set_randomly_flip(cropperRandomlyFlip);
 		this->cropper->set_background_crops_fraction(0.2);
+		this->cropper->set_max_object_size(0.3);
 	}
 
 	~MmodTrainer() {
@@ -45,6 +46,7 @@ public:
 	}
 
 protected:
+	dlib::rand rnd;
 	chip_dims* chipDims;
 	int detectorWindowTargetSize;
 	int detectorWindowMinTargetSize;
@@ -91,6 +93,10 @@ public:
 				win.add_overlay(labels[i][0].rect);
 			}
 			cin.get();
+			if (labels[i].size() != 0) {
+				cout << labels[i][0].ignore;
+				cout << labels[i][0].rect.width() << " x "<< labels[i][0].rect.height() << endl;
+			}
 		}*/
 
 		/*int minRectWidth = 500;
@@ -130,6 +136,9 @@ public:
 		printf("maxWidth: %d \n", maxwi);*/
 
 		//preprocessTrainingData(data, labels);
+
+		for (auto&& img : data)
+			disturb_colors(img, rnd);
 	}
 
 	net_type getNetWithSpecificOptions() {

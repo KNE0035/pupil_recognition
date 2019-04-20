@@ -601,302 +601,1204 @@
     <image file="s0012/s0012_07853_0_0_1_1_0_02.png">
       <box height="20" left="55" top="59" width="20" />
     </image>
-    <image file="s0012/s0012_04557_0_0_1_0_1_03.png">
-      <box height="8" left="34" top="33" width="8" />
+    
+    <image file="mySamples/sample1.png">
+      <box height="32" left="61" top="26" width="32" />
     </image>
-    <image file="s0012/s0012_04559_0_0_1_0_1_03.png">
-      <box height="8" left="34" top="33" width="8" />
+    <image file="mySamples/sample101.png">
+      <box height="44" left="65" top="21" width="44" />
     </image>
-    <image file="s0012/s0012_04558_0_0_1_2_1_03.png">
-      <box height="8" left="25" top="35" width="8" />
+    <image file="mySamples/sample10.png">
+      <box height="32" left="85" top="28" width="32" />
     </image>
-    <image file="s0012/s0012_04560_0_0_1_2_1_03.png">
-      <box height="8" left="25" top="35" width="8" />
+    <image file="mySamples/sample102.png">
+      <box height="36" left="81" top="19" width="36" />
     </image>
-    <image file="s0012/s0012_04561_0_0_1_0_1_03.png">
-      <box height="7" left="35" top="33" width="7" />
+    <image file="mySamples/sample11.png">
+      <box height="32" left="68" top="33" width="32" />
     </image>
-    <image file="s0012/s0012_04562_0_0_1_2_1_03.png">
-      <box height="8" left="25" top="35" width="8" />
+    <image file="mySamples/sample12.png">
+      <box height="39" left="78" top="20" width="39" />
     </image>
-    <image file="s0012/s0012_04563_0_0_1_0_1_03.png">
-      <box height="6" left="35" top="34" width="6" />
+    <image file="mySamples/sample13.png">
+      <box height="33" left="61" top="29" width="33" />
     </image>
-    <image file="s0012/s0012_04565_0_0_1_0_1_03.png">
-      <box height="6" left="35" top="33" width="6" />
+    <image file="mySamples/sample14.png">
+      <box height="35" left="75" top="24" width="35" />
     </image>
-    <image file="s0012/s0012_04566_0_0_1_2_1_03.png">
-      <box height="6" left="26" top="36" width="6" />
+    <image file="mySamples/sample15.png">
+      <box height="37" left="59" top="27" width="37" />
     </image>
-    <image file="s0012/s0012_04564_0_0_1_2_1_03.png">
-      <box height="6" left="26" top="36" width="6" />
+    <image file="mySamples/sample16.png">
+      <box height="32" left="80" top="19" width="32" />
     </image>
-    <image file="s0012/s0012_04568_0_0_1_2_1_03.png">
-      <box height="6" left="25" top="36" width="6" />
+    <image file="mySamples/sample17.png">
+      <box height="29" left="68" top="27" width="29" />
     </image>
-    <image file="s0012/s0012_04567_0_0_1_0_1_03.png">
-      <box height="7" left="35" top="33" width="7" />
+    <image file="mySamples/sample18.png">
+      <box height="29" left="81" top="22" width="29" />
     </image>
-    <image file="s0012/s0012_04569_0_0_1_0_1_03.png">
-      <box height="6" left="35" top="33" width="6" />
+    <image file="mySamples/sample19.png">
+      <box height="30" left="66" top="28" width="30" />
     </image>
-    <image file="s0012/s0012_04570_0_0_1_2_1_03.png">
-      <box height="7" left="25" top="36" width="7" />
+    <image file="mySamples/sample2.png">
+      <box height="33" left="82" top="20" width="33" />
     </image>
-    <image file="s0012/s0012_04571_0_0_1_0_1_03.png">
-      <box height="7" left="35" top="33" width="7" />
+    <image file="mySamples/sample20.png">
+      <box height="33" left="80" top="19" width="33" />
     </image>
-    <image file="s0012/s0012_04572_0_0_1_2_1_03.png">
-      <box height="7" left="25" top="36" width="7" />
+    <image file="mySamples/sample21.png">
+      <box height="33" left="68" top="27" width="33" />
     </image>
-    <image file="s0012/s0012_04573_0_0_1_0_1_03.png">
-      <box height="6" left="35" top="33" width="6" />
+    <image file="mySamples/sample22.png">
+      <box height="33" left="80" top="20" width="33" />
     </image>
-    <image file="s0012/s0012_04574_0_0_1_2_1_03.png">
-      <box height="6" left="25" top="35" width="6" />
+    <image file="mySamples/sample23.png">
+      <box height="30" left="67" top="29" width="30" />
     </image>
-    <image file="s0012/s0012_04575_0_0_1_0_1_03.png">
-      <box height="7" left="34" top="32" width="7" />
+    <image file="mySamples/sample24.png">
+      <box height="32" left="79" top="22" width="32" />
     </image>
-    <image file="s0012/s0012_04576_0_0_1_2_1_03.png">
-      <box height="7" left="24" top="35" width="7" />
+    <image file="mySamples/sample25.png">
+      <box height="32" left="66" top="29" width="32" />
     </image>
-    <image file="s0012/s0012_04577_0_0_1_0_1_03.png">
-      <box height="6" left="37" top="34" width="6" />
+    <image file="mySamples/sample26.png">
+      <box height="29" left="81" top="24" width="29" />
     </image>
-    <image file="s0012/s0012_04578_0_0_1_2_1_03.png">
-      <box height="7" left="25" top="36" width="7" />
+    <image file="mySamples/sample27.png">
+      <box height="28" left="68" top="31" width="28" />
     </image>
-    <image file="s0012/s0012_04579_0_0_1_0_1_03.png">
-      <box height="7" left="36" top="33" width="7" />
+    <image file="mySamples/sample28.png">
+      <box height="31" left="79" top="22" width="31" />
     </image>
-    <image file="s0012/s0012_04580_0_0_1_2_1_03.png">
-      <box height="7" left="25" top="35" width="7" />
+    <image file="mySamples/sample29.png">
+      <box height="33" left="65" top="26" width="33" />
     </image>
-    <image file="s0012/s0012_04581_0_0_1_0_1_03.png">
-      <box height="7" left="37" top="32" width="7" />
+    <image file="mySamples/sample3.png">
+      <box height="35" left="72" top="28" width="35" />
     </image>
-    <image file="s0012/s0012_04582_0_0_1_2_1_03.png">
-      <box height="7" left="27" top="37" width="7" />
+    <image file="mySamples/sample30.png">
+      <box height="29" left="81" top="25" width="29" />
     </image>
-    <image file="s0012/s0012_04583_0_0_1_0_1_03.png">
-      <box height="7" left="36" top="32" width="7" />
+    <image file="mySamples/sample31.png">
+      <box height="32" left="66" top="28" width="32" />
     </image>
-    <image file="s0012/s0012_04584_0_0_1_2_1_03.png">
-      <box height="7" left="25" top="36" width="7" />
+    <image file="mySamples/sample32.png">
+      <box height="29" left="80" top="27" width="29" />
     </image>
-    <image file="s0012/s0012_04585_0_0_1_0_1_03.png">
-      <box height="7" left="38" top="34" width="7" />
+    <image file="mySamples/sample33.png">
+      <box height="30" left="69" top="31" width="30" />
     </image>
-    <image file="s0012/s0012_04586_0_0_1_2_1_03.png">
-      <box height="7" left="26" top="36" width="7" />
+    <image file="mySamples/sample34.png">
+      <box height="31" left="76" top="22" width="31" />
     </image>
-    <image file="s0012/s0012_04587_0_0_1_0_1_03.png">
-      <box height="7" left="38" top="34" width="7" />
+    <image file="mySamples/sample35.png">
+      <box height="32" left="67" top="29" width="32" />
     </image>
-    <image file="s0012/s0012_04588_0_0_1_2_1_03.png">
-      <box height="7" left="24" top="34" width="7" />
+    <image file="mySamples/sample36.png">
+      <box height="28" left="79" top="26" width="28" />
     </image>
-    <image file="s0012/s0012_04589_0_0_1_0_1_03.png">
-      <box height="7" left="38" top="34" width="7" />
+    <image file="mySamples/sample37.png">
+      <box height="34" left="63" top="29" width="34" />
     </image>
-    <image file="s0012/s0012_04590_0_0_1_2_1_03.png">
-      <box height="7" left="25" top="34" width="7" />
+    <image file="mySamples/sample38.png">
+      <box height="36" left="76" top="22" width="36" />
     </image>
-    <image file="s0012/s0012_04591_0_0_1_1_1_03.png">
-      <box height="7" left="36" top="34" width="7" />
+    <image file="mySamples/sample39.png">
+      <box height="30" left="74" top="38" width="30" />
     </image>
-    <image file="s0012/s0012_04592_0_0_1_2_1_03.png">
-      <box height="7" left="24" top="33" width="7" />
+    <image file="mySamples/sample4.png">
+      <box height="31" left="87" top="28" width="31" />
     </image>
-    <image file="s0012/s0012_04593_0_0_1_1_1_03.png">
-      <box height="6" left="38" top="35" width="6" />
+    <image file="mySamples/sample40.png">
+      <box height="33" left="83" top="33" width="33" />
     </image>
-    <image file="s0012/s0012_04594_0_0_1_2_1_03.png">
-      <box height="6" left="25" top="35" width="6" />
+    <image file="mySamples/sample41.png">
+      <box height="28" left="72" top="36" width="28" />
     </image>
-    <image file="s0012/s0012_04595_0_0_1_1_1_03.png">
-      <box height="7" left="37" top="35" width="7" />
+    <image file="mySamples/sample42.png">
+      <box height="29" left="84" top="30" width="29" />
     </image>
-    <image file="s0012/s0012_04596_0_0_1_2_1_03.png">
-      <box height="7" left="23" top="33" width="7" />
+    <image file="mySamples/sample43.png">
+      <box height="28" left="72" top="37" width="28" />
     </image>
-    <image file="s0012/s0012_04597_0_0_1_1_1_03.png">
-      <box height="6" left="37" top="35" width="6" />
+    <image file="mySamples/sample44.png">
+      <box height="29" left="84" top="33" width="29" />
     </image>
-    <image file="s0012/s0012_04598_0_0_1_2_1_03.png">
-      <box height="6" left="26" top="35" width="6" />
+    <image file="mySamples/sample45.png">
+      <box height="30" left="68" top="38" width="30" />
     </image>
-    <image file="s0012/s0012_04599_0_0_1_1_1_03.png">
-      <box height="6" left="38" top="35" width="6" />
+    <image file="mySamples/sample46.png">
+      <box height="29" left="78" top="35" width="29" />
     </image>
-    <image file="s0012/s0012_04600_0_0_1_2_1_03.png">
-      <box height="5" left="25" top="34" width="5" />
+    <image file="mySamples/sample47.png">
+      <box height="32" left="69" top="38" width="32" />
     </image>
-    <image file="s0012/s0012_04601_0_0_1_1_1_03.png">
-      <box height="5" left="38" top="35" width="5" />
+    <image file="mySamples/sample48.png">
+      <box height="29" left="75" top="31" width="29" />
     </image>
-    <image file="s0012/s0012_04602_0_0_1_2_1_03.png">
-      <box height="5" left="27" top="36" width="5" />
+    <image file="mySamples/sample49.png">
+      <box height="30" left="68" top="34" width="30" />
     </image>
-    <image file="s0012/s0012_04603_0_0_1_0_1_03.png">
-      <box height="6" left="40" top="35" width="6" />
+    <image file="mySamples/sample5.png">
+      <box height="33" left="73" top="29" width="33" />
     </image>
-    <image file="s0012/s0012_04604_0_0_1_2_1_03.png">
-      <box height="5" left="32" top="34" width="5" />
+    <image file="mySamples/sample50.png">
+      <box height="32" left="80" top="27" width="32" />
     </image>
-    <image file="s0012/s0012_04605_0_0_1_0_1_03.png">
-      <box height="7" left="39" top="33" width="7" />
+    <image file="mySamples/sample51.png">
+      <box height="30" left="68" top="32" width="30" />
     </image>
-    <image file="s0012/s0012_04606_0_0_1_2_1_03.png">
-      <box height="7" left="28" top="34" width="7" />
+    <image file="mySamples/sample52.png">
+      <box height="31" left="83" top="26" width="31" />
     </image>
-    <image file="s0012/s0012_04607_0_0_1_0_1_03.png">
-      <box height="6" left="39" top="35" width="6" />
+    <image file="mySamples/sample53.png">
+      <box height="28" left="74" top="38" width="28" />
     </image>
-    <image file="s0012/s0012_04608_0_0_1_2_1_03.png">
-      <box height="6" left="26" top="34" width="6" />
+    <image file="mySamples/sample54.png">
+      <box height="32" left="81" top="29" width="32" />
     </image>
-    <image file="s0012/s0012_04609_0_0_1_0_1_03.png">
-      <box height="6" left="40" top="34" width="6" />
+    <image file="mySamples/sample55.png">
+      <box height="32" left="68" top="32" width="32" />
     </image>
-    <image file="s0012/s0012_04610_0_0_1_2_1_03.png">
-      <box height="6" left="28" top="36" width="6" />
+    <image file="mySamples/sample56.png">
+      <box height="31" left="82" top="27" width="31" />
     </image>
-    <image file="s0012/s0012_04611_0_0_1_0_1_03.png">
-      <box height="6" left="41" top="34" width="6" />
+    <image file="mySamples/sample57.png">
+      <box height="33" left="63" top="30" width="33" />
     </image>
-    <image file="s0012/s0012_04612_0_0_1_2_1_03.png">
-      <box height="5" left="27" top="37" width="5" />
+    <image file="mySamples/sample58.png">
+      <box height="30" left="79" top="24" width="30" />
     </image>
-    <image file="s0012/s0012_04613_0_0_1_0_1_03.png">
-      <box height="6" left="40" top="33" width="6" />
+    <image file="mySamples/sample59.png">
+      <box height="29" left="67" top="31" width="29" />
     </image>
-    <image file="s0012/s0012_04614_0_0_1_2_1_03.png">
-      <box height="6" left="27" top="37" width="6" />
+    <image file="mySamples/sample6.png">
+      <box height="30" left="89" top="25" width="30" />
     </image>
-    <image file="s0012/s0012_04615_0_0_1_0_1_03.png">
-      <box height="6" left="39" top="35" width="6" />
+    <image file="mySamples/sample60.png">
+      <box height="32" left="76" top="20" width="32" />
     </image>
-    <image file="s0012/s0012_04616_0_0_1_2_1_03.png">
-      <box height="6" left="28" top="36" width="6" />
+    <image file="mySamples/sample61.png">
+      <box height="28" left="66" top="31" width="28" />
     </image>
-    <image file="s0012/s0012_04617_0_0_1_0_1_03.png">
-      <box height="6" left="39" top="34" width="6" />
+    <image file="mySamples/sample62.png">
+      <box height="30" left="76" top="21" width="30" />
     </image>
-    <image file="s0012/s0012_04618_0_0_1_2_1_03.png">
-      <box height="6" left="29" top="35" width="6" />
+    <image file="mySamples/sample63.png">
+      <box height="29" left="63" top="30" width="29" />
     </image>
-    <image file="s0012/s0012_04619_0_0_1_0_1_03.png">
-      <box height="7" left="39" top="33" width="7" />
+    <image file="mySamples/sample64.png">
+      <box height="32" left="76" top="25" width="32" />
     </image>
-    <image file="s0012/s0012_04620_0_0_1_2_1_03.png">
-      <box height="6" left="29" top="38" width="6" />
+    <image file="mySamples/sample65.png">
+      <box height="27" left="65" top="35" width="27" />
     </image>
-    <image file="s0012/s0012_04621_0_0_1_0_1_03.png">
-      <box height="7" left="40" top="34" width="7" />
+    <image file="mySamples/sample66.png">
+      <box height="30" left="81" top="25" width="30" />
     </image>
-    <image file="s0012/s0012_04622_0_0_1_2_1_03.png">
-      <box height="6" left="27" top="36" width="6" />
+    <image file="mySamples/sample67.png">
+      <box height="31" left="65" top="30" width="31" />
     </image>
-    <image file="s0012/s0012_04623_0_0_1_0_1_03.png">
-      <box height="6" left="40" top="35" width="6" />
+    <image file="mySamples/sample68.png">
+      <box height="29" left="81" top="27" width="29" />
     </image>
-    <image file="s0012/s0012_04624_0_0_1_2_1_03.png">
-      <box height="6" left="28" top="37" width="6" />
+    <image file="mySamples/sample69.png">
+      <box height="34" left="65" top="32" width="34" />
     </image>
-    <image file="s0012/s0012_04625_0_0_1_0_1_03.png">
-      <box height="6" left="39" top="35" width="6" />
+    <image file="mySamples/sample7.png">
+      <box height="31" left="68" top="32" width="31" />
     </image>
-    <image file="s0012/s0012_04626_0_0_1_2_1_03.png">
-      <box height="7" left="28" top="36" width="7" />
+    <image file="mySamples/sample70.png">
+      <box height="32" left="85" top="27" width="32" />
     </image>
-    <image file="s0012/s0012_04627_0_0_1_0_1_03.png">
-      <box height="7" left="41" top="36" width="7" />
+    <image file="mySamples/sample71.png">
+      <box height="29" left="71" top="33" width="29" />
     </image>
-    <image file="s0012/s0012_04628_0_0_1_2_1_03.png">
-      <box height="6" left="28" top="37" width="6" />
+    <image file="mySamples/sample72.png">
+      <box height="30" left="82" top="28" width="30" />
     </image>
-    <image file="s0012/s0012_04629_0_0_1_0_1_03.png">
-      <box height="7" left="40" top="35" width="7" />
+    <image file="mySamples/sample73.png">
+      <box height="33" left="68" top="32" width="33" />
     </image>
-    <image file="s0012/s0012_04630_0_0_1_2_1_03.png">
-      <box height="7" left="26" top="35" width="7" />
+    <image file="mySamples/sample74.png">
+      <box height="31" left="81" top="26" width="31" />
     </image>
-    <image file="s0012/s0012_04631_0_0_1_0_1_03.png">
-      <box height="8" left="38" top="32" width="8" />
+    <image file="mySamples/sample75.png">
+      <box height="29" left="65" top="32" width="29" />
     </image>
-    <image file="s0012/s0012_04632_0_0_1_2_1_03.png">
-      <box height="8" left="27" top="35" width="8" />
+    <image file="mySamples/sample76.png">
+      <box height="31" left="82" top="26" width="31" />
     </image>
-    <image file="s0012/s0012_04633_0_0_1_0_1_03.png">
-      <box height="7" left="40" top="35" width="7" />
+    <image file="mySamples/sample77.png">
+      <box height="30" left="70" top="31" width="30" />
     </image>
-    <image file="s0012/s0012_04634_0_0_1_2_1_03.png">
-      <box height="6" left="26" top="33" width="6" />
+    <image file="mySamples/sample78.png">
+      <box height="32" left="79" top="26" width="32" />
     </image>
-    <image file="s0012/s0012_04635_0_0_1_0_1_03.png">
-      <box height="7" left="40" top="35" width="7" />
+    <image file="mySamples/sample79.png">
+      <box height="33" left="68" top="29" width="33" />
     </image>
-    <image file="s0012/s0012_04636_0_0_1_2_1_03.png">
-      <box height="7" left="27" top="33" width="7" />
+    <image file="mySamples/sample8.png">
+      <box height="33" left="83" top="28" width="33" />
     </image>
-    <image file="s0012/s0012_04637_0_0_1_0_1_03.png">
-      <box height="7" left="40" top="34" width="7" />
+    <image file="mySamples/sample80.png">
+      <box height="31" left="85" top="26" width="31" />
     </image>
-    <image file="s0012/s0012_04638_0_0_1_2_1_03.png">
-      <box height="8" left="27" top="34" width="8" />
+    <image file="mySamples/sample81.png">
+      <box height="28" left="70" top="34" width="28" />
     </image>
-    <image file="s0012/s0012_04639_0_0_1_0_1_03.png">
-      <box height="7" left="38" top="32" width="7" />
+    <image file="mySamples/sample82.png">
+      <box height="33" left="83" top="24" width="33" />
     </image>
-    <image file="s0012/s0012_04640_0_0_1_2_1_03.png">
-      <box height="7" left="28" top="35" width="7" />
+    <image file="mySamples/sample83.png">
+      <box height="30" left="63" top="32" width="30" />
     </image>
-    <image file="s0012/s0012_04641_0_0_1_0_1_03.png">
-      <box height="7" left="40" top="34" width="7" />
+    <image file="mySamples/sample84.png">
+      <box height="31" left="81" top="22" width="31" />
     </image>
-    <image file="s0012/s0012_04642_0_0_1_2_1_03.png">
-      <box height="6" left="29" top="35" width="6" />
+    <image file="mySamples/sample85.png">
+      <box height="30" left="67" top="32" width="30" />
     </image>
-    <image file="s0012/s0012_04643_0_0_1_0_1_03.png">
-      <box height="7" left="39" top="33" width="7" />
+    <image file="mySamples/sample86.png">
+      <box height="32" left="83" top="20" width="32" />
     </image>
-    <image file="s0012/s0012_04644_0_0_1_2_1_03.png">
-      <box height="7" left="28" top="36" width="7" />
+    <image file="mySamples/sample87.png">
+      <box height="31" left="65" top="32" width="31" />
     </image>
-    <image file="s0012/s0012_04645_0_0_1_0_1_03.png">
-      <box height="6" left="41" top="35" width="6" />
+    <image file="mySamples/sample88.png">
+      <box height="32" left="76" top="24" width="32" />
     </image>
-    <image file="s0012/s0012_04646_0_0_1_2_1_03.png">
-      <box height="6" left="29" top="36" width="6" />
+    <image file="mySamples/sample89.png">
+      <box height="31" left="69" top="31" width="31" />
     </image>
-    <image file="s0012/s0012_04647_0_0_1_0_1_03.png">
-      <box height="6" left="42" top="35" width="6" />
+    <image file="mySamples/sample9.png">
+      <box height="29" left="71" top="33" width="29" />
     </image>
-    <image file="s0012/s0012_04648_0_0_1_2_1_03.png">
-      <box height="6" left="29" top="37" width="6" />
+    <image file="mySamples/sample90.png">
+      <box height="32" left="81" top="22" width="32" />
     </image>
-    <image file="s0012/s0012_04649_0_0_1_0_1_03.png">
-      <box height="7" left="41" top="34" width="7" />
+    <image file="mySamples/sample91.png">
+      <box height="31" left="70" top="30" width="31" />
     </image>
-    <image file="s0012/s0012_04651_0_0_1_0_1_03.png">
-      <box height="7" left="40" top="34" width="7" />
+    <image file="mySamples/sample92.png">
+      <box height="31" left="81" top="23" width="31" />
     </image>
-    <image file="s0012/s0012_04650_0_0_1_2_1_03.png">
-      <box height="7" left="27" top="35" width="7" />
+    <image file="mySamples/sample93.png">
+      <box height="32" left="70" top="32" width="32" />
     </image>
-    <image file="s0012/s0012_04652_0_0_1_2_1_03.png">
-      <box height="8" left="26" top="34" width="8" />
+    <image file="mySamples/sample94.png">
+      <box height="34" left="82" top="23" width="34" />
     </image>
-    <image file="s0012/s0012_04653_0_0_1_0_1_03.png">
-      <box height="8" left="39" top="33" width="8" />
+    <image file="mySamples/sample95.png">
+      <box height="33" left="69" top="29" width="33" />
     </image>
-    <image file="s0012/s0012_04655_0_0_1_0_1_03.png">
-      <box height="8" left="40" top="32" width="8" />
+    <image file="mySamples/sample96.png">
+      <box height="33" left="84" top="23" width="33" />
     </image>
-    <image file="s0012/s0012_04656_0_0_1_2_1_03.png">
-      <box height="7" left="28" top="37" width="7" />
+    <image file="mySamples/sample97.png">
+      <box height="28" left="68" top="33" width="28" />
+    </image>
+    <image file="mySamples/sample98.png">
+      <box height="31" left="78" top="26" width="31" />
+    </image>
+    <image file="mySamples/sample1.png">
+      <box height="32" left="61" top="26" width="32" />
+    </image>
+    <image file="mySamples/sample101.png">
+      <box height="44" left="65" top="21" width="44" />
+    </image>
+    <image file="mySamples/sample10.png">
+      <box height="32" left="85" top="28" width="32" />
+    </image>
+    <image file="mySamples/sample102.png">
+      <box height="36" left="81" top="19" width="36" />
+    </image>
+    <image file="mySamples/sample11.png">
+      <box height="32" left="68" top="33" width="32" />
+    </image>
+    <image file="mySamples/sample12.png">
+      <box height="39" left="78" top="20" width="39" />
+    </image>
+    <image file="mySamples/sample13.png">
+      <box height="33" left="61" top="29" width="33" />
+    </image>
+    <image file="mySamples/sample14.png">
+      <box height="35" left="75" top="24" width="35" />
+    </image>
+    <image file="mySamples/sample15.png">
+      <box height="37" left="59" top="27" width="37" />
+    </image>
+    <image file="mySamples/sample16.png">
+      <box height="32" left="80" top="19" width="32" />
+    </image>
+    <image file="mySamples/sample17.png">
+      <box height="29" left="68" top="27" width="29" />
+    </image>
+    <image file="mySamples/sample18.png">
+      <box height="29" left="81" top="22" width="29" />
+    </image>
+    <image file="mySamples/sample19.png">
+      <box height="30" left="66" top="28" width="30" />
+    </image>
+    <image file="mySamples/sample2.png">
+      <box height="33" left="82" top="20" width="33" />
+    </image>
+    <image file="mySamples/sample20.png">
+      <box height="33" left="80" top="19" width="33" />
+    </image>
+    <image file="mySamples/sample21.png">
+      <box height="33" left="68" top="27" width="33" />
+    </image>
+    <image file="mySamples/sample22.png">
+      <box height="33" left="80" top="20" width="33" />
+    </image>
+    <image file="mySamples/sample23.png">
+      <box height="30" left="67" top="29" width="30" />
+    </image>
+    <image file="mySamples/sample24.png">
+      <box height="32" left="79" top="22" width="32" />
+    </image>
+    <image file="mySamples/sample25.png">
+      <box height="32" left="66" top="29" width="32" />
+    </image>
+    <image file="mySamples/sample26.png">
+      <box height="29" left="81" top="24" width="29" />
+    </image>
+    <image file="mySamples/sample27.png">
+      <box height="28" left="68" top="31" width="28" />
+    </image>
+    <image file="mySamples/sample28.png">
+      <box height="31" left="79" top="22" width="31" />
+    </image>
+    <image file="mySamples/sample29.png">
+      <box height="33" left="65" top="26" width="33" />
+    </image>
+    <image file="mySamples/sample3.png">
+      <box height="35" left="72" top="28" width="35" />
+    </image>
+    <image file="mySamples/sample30.png">
+      <box height="29" left="81" top="25" width="29" />
+    </image>
+    <image file="mySamples/sample31.png">
+      <box height="32" left="66" top="28" width="32" />
+    </image>
+    <image file="mySamples/sample32.png">
+      <box height="29" left="80" top="27" width="29" />
+    </image>
+    <image file="mySamples/sample33.png">
+      <box height="30" left="69" top="31" width="30" />
+    </image>
+    <image file="mySamples/sample34.png">
+      <box height="31" left="76" top="22" width="31" />
+    </image>
+    <image file="mySamples/sample35.png">
+      <box height="32" left="67" top="29" width="32" />
+    </image>
+    <image file="mySamples/sample36.png">
+      <box height="28" left="79" top="26" width="28" />
+    </image>
+    <image file="mySamples/sample37.png">
+      <box height="34" left="63" top="29" width="34" />
+    </image>
+    <image file="mySamples/sample38.png">
+      <box height="36" left="76" top="22" width="36" />
+    </image>
+    <image file="mySamples/sample39.png">
+      <box height="30" left="74" top="38" width="30" />
+    </image>
+    <image file="mySamples/sample4.png">
+      <box height="31" left="87" top="28" width="31" />
+    </image>
+    <image file="mySamples/sample40.png">
+      <box height="33" left="83" top="33" width="33" />
+    </image>
+    <image file="mySamples/sample41.png">
+      <box height="28" left="72" top="36" width="28" />
+    </image>
+    <image file="mySamples/sample42.png">
+      <box height="29" left="84" top="30" width="29" />
+    </image>
+    <image file="mySamples/sample43.png">
+      <box height="28" left="72" top="37" width="28" />
+    </image>
+    <image file="mySamples/sample44.png">
+      <box height="29" left="84" top="33" width="29" />
+    </image>
+    <image file="mySamples/sample45.png">
+      <box height="30" left="68" top="38" width="30" />
+    </image>
+    <image file="mySamples/sample46.png">
+      <box height="29" left="78" top="35" width="29" />
+    </image>
+    <image file="mySamples/sample47.png">
+      <box height="32" left="69" top="38" width="32" />
+    </image>
+    <image file="mySamples/sample48.png">
+      <box height="29" left="75" top="31" width="29" />
+    </image>
+    <image file="mySamples/sample49.png">
+      <box height="30" left="68" top="34" width="30" />
+    </image>
+    <image file="mySamples/sample5.png">
+      <box height="33" left="73" top="29" width="33" />
+    </image>
+    <image file="mySamples/sample50.png">
+      <box height="32" left="80" top="27" width="32" />
+    </image>
+    <image file="mySamples/sample51.png">
+      <box height="30" left="68" top="32" width="30" />
+    </image>
+    <image file="mySamples/sample52.png">
+      <box height="31" left="83" top="26" width="31" />
+    </image>
+    <image file="mySamples/sample53.png">
+      <box height="28" left="74" top="38" width="28" />
+    </image>
+    <image file="mySamples/sample54.png">
+      <box height="32" left="81" top="29" width="32" />
+    </image>
+    <image file="mySamples/sample55.png">
+      <box height="32" left="68" top="32" width="32" />
+    </image>
+    <image file="mySamples/sample56.png">
+      <box height="31" left="82" top="27" width="31" />
+    </image>
+    <image file="mySamples/sample57.png">
+      <box height="33" left="63" top="30" width="33" />
+    </image>
+    <image file="mySamples/sample58.png">
+      <box height="30" left="79" top="24" width="30" />
+    </image>
+    <image file="mySamples/sample59.png">
+      <box height="29" left="67" top="31" width="29" />
+    </image>
+    <image file="mySamples/sample6.png">
+      <box height="30" left="89" top="25" width="30" />
+    </image>
+    <image file="mySamples/sample60.png">
+      <box height="32" left="76" top="20" width="32" />
+    </image>
+    <image file="mySamples/sample61.png">
+      <box height="28" left="66" top="31" width="28" />
+    </image>
+    <image file="mySamples/sample62.png">
+      <box height="30" left="76" top="21" width="30" />
+    </image>
+    <image file="mySamples/sample63.png">
+      <box height="29" left="63" top="30" width="29" />
+    </image>
+    <image file="mySamples/sample64.png">
+      <box height="32" left="76" top="25" width="32" />
+    </image>
+    <image file="mySamples/sample65.png">
+      <box height="27" left="65" top="35" width="27" />
+    </image>
+    <image file="mySamples/sample66.png">
+      <box height="30" left="81" top="25" width="30" />
+    </image>
+    <image file="mySamples/sample67.png">
+      <box height="31" left="65" top="30" width="31" />
+    </image>
+    <image file="mySamples/sample68.png">
+      <box height="29" left="81" top="27" width="29" />
+    </image>
+    <image file="mySamples/sample69.png">
+      <box height="34" left="65" top="32" width="34" />
+    </image>
+    <image file="mySamples/sample7.png">
+      <box height="31" left="68" top="32" width="31" />
+    </image>
+    <image file="mySamples/sample70.png">
+      <box height="32" left="85" top="27" width="32" />
+    </image>
+    <image file="mySamples/sample71.png">
+      <box height="29" left="71" top="33" width="29" />
+    </image>
+    <image file="mySamples/sample72.png">
+      <box height="30" left="82" top="28" width="30" />
+    </image>
+    <image file="mySamples/sample73.png">
+      <box height="33" left="68" top="32" width="33" />
+    </image>
+    <image file="mySamples/sample74.png">
+      <box height="31" left="81" top="26" width="31" />
+    </image>
+    <image file="mySamples/sample75.png">
+      <box height="29" left="65" top="32" width="29" />
+    </image>
+    <image file="mySamples/sample76.png">
+      <box height="31" left="82" top="26" width="31" />
+    </image>
+    <image file="mySamples/sample77.png">
+      <box height="30" left="70" top="31" width="30" />
+    </image>
+    <image file="mySamples/sample78.png">
+      <box height="32" left="79" top="26" width="32" />
+    </image>
+    <image file="mySamples/sample79.png">
+      <box height="33" left="68" top="29" width="33" />
+    </image>
+    <image file="mySamples/sample8.png">
+      <box height="33" left="83" top="28" width="33" />
+    </image>
+    <image file="mySamples/sample80.png">
+      <box height="31" left="85" top="26" width="31" />
+    </image>
+    <image file="mySamples/sample81.png">
+      <box height="28" left="70" top="34" width="28" />
+    </image>
+    <image file="mySamples/sample82.png">
+      <box height="33" left="83" top="24" width="33" />
+    </image>
+    <image file="mySamples/sample83.png">
+      <box height="30" left="63" top="32" width="30" />
+    </image>
+    <image file="mySamples/sample84.png">
+      <box height="31" left="81" top="22" width="31" />
+    </image>
+    <image file="mySamples/sample85.png">
+      <box height="30" left="67" top="32" width="30" />
+    </image>
+    <image file="mySamples/sample86.png">
+      <box height="32" left="83" top="20" width="32" />
+    </image>
+    <image file="mySamples/sample87.png">
+      <box height="31" left="65" top="32" width="31" />
+    </image>
+    <image file="mySamples/sample88.png">
+      <box height="32" left="76" top="24" width="32" />
+    </image>
+    <image file="mySamples/sample89.png">
+      <box height="31" left="69" top="31" width="31" />
+    </image>
+    <image file="mySamples/sample9.png">
+      <box height="29" left="71" top="33" width="29" />
+    </image>
+    <image file="mySamples/sample90.png">
+      <box height="32" left="81" top="22" width="32" />
+    </image>
+    <image file="mySamples/sample91.png">
+      <box height="31" left="70" top="30" width="31" />
+    </image>
+    <image file="mySamples/sample92.png">
+      <box height="31" left="81" top="23" width="31" />
+    </image>
+    <image file="mySamples/sample93.png">
+      <box height="32" left="70" top="32" width="32" />
+    </image>
+    <image file="mySamples/sample94.png">
+      <box height="34" left="82" top="23" width="34" />
+    </image>
+    <image file="mySamples/sample95.png">
+      <box height="33" left="69" top="29" width="33" />
+    </image>
+    <image file="mySamples/sample96.png">
+      <box height="33" left="84" top="23" width="33" />
+    </image>
+    <image file="mySamples/sample97.png">
+      <box height="28" left="68" top="33" width="28" />
+    </image>
+    <image file="mySamples/sample98.png">
+      <box height="31" left="78" top="26" width="31" />
+    </image>
+    <image file="mySamples/sample98.png" />
+    <image file="mySamples/sample104.png">
+      <box height="20" left="46" top="41" width="20" />
+    </image>
+    <image file="mySamples/sample105.png">
+      <box height="20" left="48" top="41" width="20" />
+    </image>
+    <image file="mySamples/sample110.png">
+      <box height="20" left="43" top="46" width="20" />
+    </image>
+    <image file="mySamples/sample111.png">
+      <box height="19" left="46" top="47" width="19" />
+    </image>
+    <image file="mySamples/sample112.png">
+      <box height="20" left="48" top="47" width="20" />
+    </image>
+    <image file="mySamples/sample113.png">
+      <box height="18" left="49" top="45" width="18" />
+    </image>
+    <image file="mySamples/sample114.png">
+      <box height="20" left="49" top="48" width="20" />
+    </image>
+    <image file="mySamples/sample115.png">
+      <box height="19" left="51" top="48" width="19" />
+    </image>
+    <image file="mySamples/sample116.png">
+      <box height="19" left="50" top="45" width="19" />
+    </image>
+    <image file="mySamples/sample117.png">
+      <box height="18" left="51" top="43" width="18" />
+    </image>
+    <image file="mySamples/sample118.png">
+      <box height="18" left="52" top="45" width="18" />
+    </image>
+    <image file="mySamples/sample119.png">
+      <box height="17" left="52" top="46" width="17" />
+    </image>
+    <image file="mySamples/sample120.png">
+      <box height="19" left="52" top="43" width="19" />
+    </image>
+    <image file="mySamples/sample121.png">
+      <box height="17" left="50" top="43" width="17" />
+    </image>
+    <image file="mySamples/sample122.png">
+      <box height="18" left="51" top="41" width="18" />
+    </image>
+    <image file="mySamples/sample123.png">
+      <box height="18" left="50" top="42" width="18" />
+    </image>
+    <image file="mySamples/sample124.png">
+      <box height="17" left="51" top="41" width="17" />
+    </image>
+    <image file="mySamples/sample125.png">
+      <box height="17" left="50" top="44" width="17" />
+    </image>
+    <image file="mySamples/sample126.png">
+      <box height="17" left="52" top="41" width="17" />
+    </image>
+    <image file="mySamples/sample127.png">
+      <box height="18" left="50" top="42" width="18" />
+    </image>
+    <image file="mySamples/sample128.png">
+      <box height="18" left="52" top="39" width="18" />
+    </image>
+    <image file="mySamples/sample129.png">
+      <box height="17" left="48" top="42" width="17" />
+    </image>
+    <image file="mySamples/sample130.png">
+      <box height="16" left="32" top="38" width="16" />
+    </image>
+    <image file="mySamples/sample133.png">
+      <box height="15" left="24" top="43" width="15" />
+    </image>
+    <image file="mySamples/sample149.png">
+      <box height="17" left="50" top="41" width="17" />
+    </image>
+    <image file="mySamples/sample151.png">
+      <box height="20" left="46" top="45" width="20" />
+    </image>
+    <image file="mySamples/sample131.png">
+      <box height="15" left="28" top="42" width="15" />
+    </image>
+    <image file="mySamples/sample150.png">
+      <box height="18" left="45" top="46" width="18" />
+    </image>
+    <image file="mySamples/sample152.png">
+      <box height="20" left="48" top="47" width="20" />
+    </image>
+    <image file="mySamples/sample153.png">
+      <box height="18" left="50" top="44" width="18" />
+    </image>
+    <image file="mySamples/sample154.png">
+      <box height="20" left="50" top="44" width="20" />
+    </image>
+    <image file="mySamples/sample155.png">
+      <box height="19" left="51" top="43" width="19" />
+    </image>
+    <image file="mySamples/sample156.png">
+      <box height="19" left="52" top="42" width="19" />
+    </image>
+    <image file="mySamples/sample157.png">
+      <box height="19" left="50" top="42" width="19" />
+    </image>
+    <image file="mySamples/sample158.png">
+      <box height="18" left="50" top="40" width="18" />
+    </image>
+    <image file="mySamples/sample159.png">
+      <box height="17" left="48" top="42" width="17" />
+    </image>
+    <image file="mySamples/sample160.png">
+      <box height="18" left="50" top="41" width="18" />
+    </image>
+    <image file="mySamples/sample161.png">
+      <box height="16" left="51" top="44" width="16" />
+    </image>
+    <image file="mySamples/sample162.png">
+      <box height="18" left="51" top="40" width="18" />
+    </image>
+    <image file="mySamples/sample163.png">
+      <box height="18" left="47" top="43" width="18" />
+    </image>
+    <image file="mySamples/sample164.png">
+      <box height="14" left="33" top="37" width="14" />
+    </image>
+    <image file="mySamples/sample165.png">
+      <box height="14" left="28" top="41" width="14" />
+    </image>
+    <image file="mySamples/sample166.png">
+      <box height="14" left="25" top="42" width="14" />
+    </image>
+    <image file="mySamples/sample167.png">
+      <box height="15" left="22" top="44" width="15" />
+    </image>
+    <image file="mySamples/sample168.png">
+      <box height="15" left="88" top="41" width="15" />
+    </image>
+    <image file="mySamples/sample169.png">
+      <box height="15" left="76" top="48" width="15" />
+    </image>
+    <image file="mySamples/sample170.png">
+      <box height="19" left="51" top="45" width="19" />
+    </image>
+    <image file="mySamples/sample171.png">
+      <box height="19" left="46" top="47" width="19" />
+    </image>
+    <image file="mySamples/sample172.png">
+      <box height="19" left="45" top="44" width="19" />
+    </image>
+    <image file="mySamples/sample173.png">
+      <box height="17" left="47" top="43" width="17" />
+    </image>
+    <image file="mySamples/sample174.png">
+      <box height="18" left="48" top="42" width="18" />
+    </image>
+    <image file="mySamples/sample175.png">
+      <box height="19" left="48" top="42" width="19" />
+    </image>
+    <image file="mySamples/sample176.png">
+      <box height="18" left="48" top="46" width="18" />
+    </image>
+    <image file="mySamples/sample177.png">
+      <box height="18" left="49" top="45" width="18" />
+    </image>
+    <image file="mySamples/sample178.png">
+      <box height="19" left="49" top="42" width="19" />
+    </image>
+    <image file="mySamples/sample179.png">
+      <box height="18" left="50" top="44" width="18" />
+    </image>
+    <image file="mySamples/sample184.png">
+      <box height="19" left="48" top="45" width="19" />
+    </image>
+    <image file="mySamples/sample185.png">
+      <box height="17" left="47" top="45" width="17" />
+    </image>
+    <image file="mySamples/sample186.png">
+      <box height="19" left="44" top="46" width="19" />
+    </image>
+    <image file="mySamples/sample187.png">
+      <box height="18" left="47" top="45" width="18" />
+    </image>
+    <image file="mySamples/sample188.png">
+      <box height="17" left="49" top="45" width="17" />
+    </image>
+    <image file="mySamples/sample189.png">
+      <box height="17" left="49" top="45" width="17" />
+    </image>
+    <image file="mySamples/sample190.png">
+      <box height="17" left="50" top="47" width="17" />
+    </image>
+    <image file="mySamples/sample191.png">
+      <box height="17" left="51" top="44" width="17" />
+    </image>
+    <image file="mySamples/sample192.png">
+      <box height="18" left="49" top="48" width="18" />
+    </image>
+    <image file="mySamples/sample193.png">
+      <box height="18" left="49" top="45" width="18" />
+    </image>
+    <image file="mySamples/sample194.png">
+      <box height="18" left="51" top="45" width="18" />
+    </image>
+    <image file="mySamples/sample195.png">
+      <box height="18" left="51" top="43" width="18" />
+    </image>
+    <image file="mySamples/sample196.png">
+      <box height="19" left="51" top="44" width="19" />
+    </image>
+    <image file="mySamples/sample197.png">
+      <box height="17" left="51" top="44" width="17" />
+    </image>
+    <image file="mySamples/sample198.png">
+      <box height="17" left="53" top="43" width="17" />
+    </image>
+    <image file="mySamples/sample199.png">
+      <box height="17" left="51" top="43" width="17" />
+    </image>
+    <image file="mySamples/sample200.png">
+      <box height="17" left="50" top="43" width="17" />
+    </image>
+    <image file="mySamples/sample201.png">
+      <box height="18" left="49" top="43" width="18" />
+    </image>
+    <image file="mySamples/sample202.png">
+      <box height="18" left="50" top="40" width="18" />
+    </image>
+    <image file="mySamples/sample203.png">
+      <box height="17" left="48" top="42" width="17" />
+    </image>
+    <image file="mySamples/sample204.png">
+      <box height="17" left="51" top="41" width="17" />
+    </image>
+    <image file="mySamples/sample205.png">
+      <box height="17" left="48" top="41" width="17" />
+    </image>
+    <image file="mySamples/sample206.png">
+      <box height="20" left="49" top="42" width="20" />
+    </image>
+    <image file="mySamples/sample207.png">
+      <box height="18" left="50" top="44" width="18" />
+    </image>
+    <image file="mySamples/sample208.png">
+      <box height="19" left="45" top="43" width="19" />
+    </image>
+    <image file="mySamples/sample209.png">
+      <box height="18" left="45" top="42" width="18" />
+    </image>
+    <image file="mySamples/sample210.png">
+      <box height="18" left="51" top="41" width="18" />
+    </image>
+    <image file="mySamples/sample211.png">
+      <box height="19" left="47" top="43" width="19" />
+    </image>
+    <image file="mySamples/sample215.png">
+      <box height="15" left="27" top="41" width="15" />
+    </image>
+    <image file="mySamples/sample217.png">
+      <box height="13" left="29" top="43" width="13" />
+    </image>
+    <image file="mySamples/sample218.png">
+      <box height="14" left="25" top="42" width="14" />
+    </image>
+    <image file="mySamples/sample224.png">
+      <box height="19" left="49" top="42" width="19" />
+    </image>
+    <image file="mySamples/sample225.png">
+      <box height="17" left="47" top="42" width="17" />
+    </image>
+    <image file="mySamples/sample226.png">
+      <box height="20" left="50" top="45" width="20" />
+    </image>
+    <image file="mySamples/sample227.png">
+      <box height="18" left="46" top="47" width="18" />
+    </image>
+    <image file="mySamples/sample228.png">
+      <box height="18" left="49" top="43" width="18" />
+    </image>
+    <image file="mySamples/sample229.png">
+      <box height="18" left="49" top="42" width="18" />
+    </image>
+    <image file="mySamples/sample230.png">
+      <box height="18" left="45" top="44" width="18" />
+    </image>
+    <image file="mySamples/sample231.png">
+      <box height="17" left="47" top="44" width="17" />
+    </image>
+    <image file="mySamples/sample232.png">
+      <box height="18" left="47" top="46" width="18" />
+    </image>
+    <image file="mySamples/sample233.png">
+      <box height="18" left="46" top="44" width="18" />
+    </image>
+    <image file="mySamples/sample234.png">
+      <box height="18" left="48" top="41" width="18" />
+    </image>
+    <image file="mySamples/sample235.png">
+      <box height="18" left="48" top="43" width="18" />
+    </image>
+    <image file="mySamples/sample236.png">
+      <box height="39" left="77" top="26" width="39" />
+    </image>
+    <image file="mySamples/sample237.png">
+      <box height="37" left="85" top="22" width="37" />
+    </image>
+    <image file="mySamples/sample238.png">
+      <box height="34" left="70" top="27" width="34" />
+    </image>
+    <image file="mySamples/sample239.png">
+      <box height="33" left="85" top="20" width="33" />
+    </image>
+    <image file="mySamples/sample240.png">
+      <box height="32" left="69" top="27" width="32" />
+    </image>
+    <image file="mySamples/sample241.png">
+      <box height="30" left="89" top="17" width="30" />
+    </image>
+    <image file="mySamples/sample242.png">
+      <box height="32" left="71" top="26" width="32" />
+    </image>
+    <image file="mySamples/sample243.png">
+      <box height="31" left="88" top="19" width="31" />
+    </image>
+    <image file="mySamples/sample244.png">
+      <box height="30" left="77" top="24" width="30" />
+    </image>
+    <image file="mySamples/sample245.png">
+      <box height="27" left="94" top="20" width="27" />
+    </image>
+    <image file="mySamples/sample246.png">
+      <box height="27" left="80" top="31" width="27" />
+    </image>
+    <image file="mySamples/sample247.png">
+      <box height="28" left="89" top="25" width="28" />
+    </image>
+    <image file="mySamples/sample248.png">
+      <box height="34" left="77" top="26" width="34" />
+    </image>
+    <image file="mySamples/sample249.png">
+      <box height="33" left="89" top="23" width="33" />
+    </image>
+    <image file="mySamples/sample251.png">
+      <box height="28" left="92" top="23" width="28" />
+    </image>
+    <image file="mySamples/sample252.png">
+      <box height="28" left="76" top="28" width="28" />
+    </image>
+    <image file="mySamples/sample253.png">
+      <box height="32" left="91" top="21" width="32" />
+    </image>
+    <image file="mySamples/sample254.png">
+      <box height="32" left="84" top="35" width="32" />
+    </image>
+    <image file="mySamples/sample255.png">
+      <box height="30" left="104" top="29" width="30" />
+    </image>
+    <image file="mySamples/sample256.png">
+      <box height="31" left="85" top="36" width="31" />
+    </image>
+    <image file="mySamples/sample257.png">
+      <box height="33" left="97" top="30" width="33" />
+    </image>
+    <image file="mySamples/sample258.png">
+      <box height="32" left="84" top="37" width="32" />
+    </image>
+    <image file="mySamples/sample250.png">
+      <box height="32" left="78" top="26" width="32" />
+    </image>
+    <image file="mySamples/sample259.png">
+      <box height="34" left="95" top="30" width="34" />
+    </image>
+    <image file="mySamples/sample260.png">
+      <box height="32" left="85" top="38" width="32" />
+    </image>
+    <image file="mySamples/sample261.png">
+      <box height="31" left="95" top="29" width="31" />
+    </image>
+    <image file="mySamples/sample262.png">
+      <box height="30" left="86" top="32" width="30" />
+    </image>
+    <image file="mySamples/sample263.png">
+      <box height="29" left="101" top="27" width="29" />
+    </image>
+    <image file="mySamples/sample264.png">
+      <box height="28" left="92" top="33" width="28" />
+    </image>
+    <image file="mySamples/sample265.png">
+      <box height="29" left="101" top="26" width="29" />
+    </image>
+    <image file="mySamples/sample297.png">
+      <box height="29" left="87" top="30" width="29" />
+    </image>
+    <image file="mySamples/sample302.png">
+      <box height="28" left="80" top="32" width="28" />
+    </image>
+    <image file="mySamples/sample303.png">
+      <box height="26" left="85" top="23" width="26" />
+    </image>
+    <image file="mySamples/sample304.png">
+      <box height="27" left="81" top="31" width="27" />
+    </image>
+    <image file="mySamples/sample305.png">
+      <box height="28" left="88" top="24" width="28" />
+    </image>
+    <image file="mySamples/sample306.png">
+      <box height="29" left="77" top="29" width="29" />
+    </image>
+    <image file="mySamples/sample307.png">
+      <box height="32" left="85" top="21" width="32" />
+    </image>
+    <image file="mySamples/sample308.png">
+      <box height="32" left="75" top="30" width="32" />
+    </image>
+    <image file="mySamples/sample309.png">
+      <box height="29" left="80" top="23" width="29" />
+    </image>
+    <image file="mySamples/sample310.png">
+      <box height="29" left="81" top="28" width="29" />
+    </image>
+    <image file="mySamples/sample311.png">
+      <box height="35" left="87" top="12" width="35" />
+    </image>
+    <image file="mySamples/sample312.png">
+      <box height="27" left="81" top="28" width="27" />
+    </image>
+    <image file="mySamples/sample313.png">
+      <box height="29" left="89" top="21" width="29" />
+    </image>
+    <image file="mySamples/sample314.png">
+      <box height="31" left="80" top="27" width="31" />
+    </image>
+    <image file="mySamples/sample315.png">
+      <box height="30" left="93" top="20" width="30" />
+    </image>
+    <image file="mySamples/sample316.png">
+      <box height="36" left="73" top="27" width="36" />
+    </image>
+    <image file="mySamples/sample317.png">
+      <box height="32" left="95" top="17" width="32" />
+    </image>
+    <image file="mySamples/sample318.png">
+      <box height="34" left="78" top="26" width="34" />
+    </image>
+    <image file="mySamples/sample319.png">
+      <box height="33" left="90" top="15" width="33" />
+    </image>
+    <image file="mySamples/sample320.png">
+      <box height="33" left="78" top="26" width="33" />
+    </image>
+    <image file="mySamples/sample321.png">
+      <box height="34" left="96" top="17" width="34" />
+    </image>
+    <image file="mySamples/sample322.png">
+      <box height="35" left="75" top="24" width="35" />
+    </image>
+    <image file="mySamples/sample323.png">
+      <box height="32" left="94" top="16" width="32" />
+    </image>
+    <image file="mySamples/sample324.png">
+      <box height="29" left="86" top="29" width="29" />
+    </image>
+    <image file="mySamples/sample325.png">
+      <box height="29" left="97" top="24" width="29" />
+    </image>
+    <image file="mySamples/sample326.png">
+      <box height="31" left="83" top="35" width="31" />
+    </image>
+    <image file="mySamples/sample327.png">
+      <box height="27" left="104" top="32" width="27" />
+    </image>
+    <image file="mySamples/sample328.png">
+      <box height="29" left="92" top="38" width="29" />
+    </image>
+    <image file="mySamples/sample329.png">
+      <box height="30" left="107" top="32" width="30" />
+    </image>
+    <image file="mySamples/sample330.png">
+      <box height="28" left="95" top="37" width="28" />
+    </image>
+    <image file="mySamples/sample331.png">
+      <box height="29" left="107" top="33" width="29" />
+    </image>
+    <image file="mySamples/sample332.png">
+      <box height="34" left="77" top="25" width="34" />
+    </image>
+    <image file="mySamples/sample333.png">
+      <box height="28" left="94" top="24" width="28" />
+    </image>
+    <image file="mySamples/sample334.png">
+      <box height="28" left="82" top="29" width="28" />
+    </image>
+    <image file="mySamples/sample335.png">
+      <box height="26" left="93" top="23" width="26" />
+    </image>
+    <image file="mySamples/sample336.png">
+      <box height="30" left="80" top="29" width="30" />
+    </image>
+    <image file="mySamples/sample337.png">
+      <box height="27" left="93" top="21" width="27" />
+    </image>
+    <image file="mySamples/sample338.png">
+      <box height="32" left="79" top="28" width="32" />
+    </image>
+    <image file="mySamples/sample339.png">
+      <box height="35" left="86" top="23" width="35" />
+    </image>
+    <image file="mySamples/sample340.png">
+      <box height="32" left="78" top="30" width="32" />
+    </image>
+    <image file="mySamples/sample341.png">
+      <box height="30" left="91" top="23" width="30" />
+    </image>
+    <image file="mySamples/sample342.png">
+      <box height="30" left="76" top="30" width="30" />
+    </image>
+    <image file="mySamples/sample343.png">
+      <box height="29" left="92" top="22" width="29" />
+    </image>
+    <image file="mySamples/sample344.png">
+      <box height="31" left="77" top="29" width="31" />
+    </image>
+    <image file="mySamples/sample345.png">
+      <box height="36" left="87" top="17" width="36" />
+    </image>
+    <image file="mySamples/sample346.png">
+      <box height="31" left="75" top="23" width="31" />
+    </image>
+    <image file="mySamples/sample347.png">
+      <box height="33" left="85" top="17" width="33" />
+    </image>
+    <image file="mySamples/sample348.png">
+      <box height="29" left="74" top="25" width="29" />
+    </image>
+    <image file="mySamples/sample349.png">
+      <box height="38" left="84" top="17" width="38" />
+    </image>
+    <image file="mySamples/sample350.png">
+      <box height="35" left="69" top="29" width="35" />
+    </image>
+    <image file="mySamples/sample351.png">
+      <box height="33" left="87" top="23" width="33" />
+    </image>
+    <image file="mySamples/sample352.png">
+      <box height="32" left="77" top="29" width="32" />
+    </image>
+    <image file="mySamples/sample353.png">
+      <box height="37" left="89" top="22" width="37" />
+    </image>
+    <image file="mySamples/sample354.png">
+      <box height="42" left="75" top="23" width="42" />
+    </image>
+    <image file="mySamples/sample355.png">
+      <box height="38" left="89" top="20" width="38" />
+    </image>
+    <image file="mySamples/sample356.png">
+      <box height="39" left="76" top="22" width="39" />
+    </image>
+    <image file="mySamples/sample357.png">
+      <box height="39" left="88" top="18" width="39" />
+    </image>
+    <image file="mySamples/sample358.png">
+      <box height="37" left="70" top="25" width="37" />
+    </image>
+    <image file="mySamples/sample359.png">
+      <box height="37" left="89" top="18" width="37" />
+    </image>
+    <image file="mySamples/sample360.png">
+      <box height="39" left="73" top="27" width="39" />
+    </image>
+    <image file="mySamples/sample361.png">
+      <box height="42" left="86" top="15" width="42" />
+    </image>
+    <image file="mySamples/sample362.png">
+      <box height="38" left="75" top="22" width="38" />
+    </image>
+    <image file="mySamples/sample363.png">
+      <box height="39" left="87" top="16" width="39" />
+    </image>
+    <image file="mySamples/sample364.png">
+      <box height="40" left="79" top="27" width="40" />
+    </image>
+    <image file="mySamples/sample365.png">
+      <box height="37" left="95" top="22" width="37" />
+    </image>
+    <image file="mySamples/sample366.png">
+      <box height="35" left="83" top="33" width="35" />
+    </image>
+    <image file="mySamples/sample367.png">
+      <box height="38" left="98" top="26" width="38" />
+    </image>
+    <image file="mySamples/sample368.png">
+      <box height="35" left="85" top="31" width="35" />
+    </image>
+    <image file="mySamples/sample369.png">
+      <box height="35" left="97" top="26" width="35" />
+    </image>
+    <image file="mySamples/sample132.png">
+      <box height="16" left="27" top="41" width="16" />
     </image>
   </images>
 </dataset>

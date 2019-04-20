@@ -9,6 +9,7 @@ dist
 opencv
 
 /faces
+/training_images/mySamples
 /training_images/s0001
 /training_images/s0002
 /training_images/s0003

@@ -9,7 +9,13 @@ VideoObjectBoxDetector::VideoObjectBoxDetector() {
 
 VideoObjectBoxDetector::VideoObjectBoxDetector(string videoFilePath) {
 	this->videoFilePath = videoFilePath;
-	this->videoCapture = cv::VideoCapture(videoFilePath);
+
+	if (videoFilePath == "") {
+		this->videoCapture = cv::VideoCapture(0);
+	}
+	else {
+		this->videoCapture = cv::VideoCapture(videoFilePath);
+	}
 }
 
 void VideoObjectBoxDetector::startDetector() {
@@ -36,12 +42,12 @@ void VideoObjectBoxDetector::startDetector() {
 				{
 					break;
 				}
-				//cv::flip(cvimg, cvimg, -1);
-				resize(cvimg, cvimgResized, cv::Size(960, 540), 0, 0, cv::INTER_LINEAR_EXACT);
+				//cv::rotate(cvimg, cvimg, 1);
+				//resize(cvimg, cvimg, cv::Size(960, 540), 0, 0, cv::INTER_LINEAR_EXACT);
 
-				cv_image<bgr_pixel> dlibStructImg(cvimgResized);
+				cv_image<bgr_pixel> dlibStructImg(cvimg);
 
-				std::vector<rectangle> objectsBoundingBoxes = getBoundingBoxesFromImage(cvimgResized);
+				std::vector<rectangle> objectsBoundingBoxes = getBoundingBoxesFromImage(cvimg);
 				win.clear_overlay();
 				win.set_image(dlibStructImg);
 

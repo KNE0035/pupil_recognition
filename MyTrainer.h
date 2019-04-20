@@ -35,7 +35,7 @@ public:
 		if (verboseMode) {
 			trainer.be_verbose();
 		}
-		trainer.set_synchronization_file(this->syncFile, std::chrono::minutes(5));
+		trainer.set_synchronization_file(this->syncFile, std::chrono::minutes(2));
 		trainer.set_iterations_without_progress_threshold(this->iterationWithoutProgressTreshold);
 
 		while (trainer.get_learning_rate() >= this->minimumLearningRate)

@@ -13,7 +13,8 @@ public:
 
 	void startDetector();
 protected:
-	
+	int faceDetectionNumber = 0;
+	int sampleNumber = 0;
 private:
 	cv::VideoCapture videoCapture;
 	string videoFilePath = "";
