@@ -27,7 +27,6 @@ public:
 		MmodDatasetLoader* mmodDataLoader,
 		int batchSize) : MyTrainer<net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, verboseMode)
 	{
-		mmodDataLoader->resetLoader();
 		this->mmodDataLoader = mmodDataLoader;
 		this->chipDims = normalizedChipDims;
 		this->batchSize = batchSize;
@@ -61,7 +60,7 @@ public:
 	void obtaionNextBatchOfTrainingDataAndLabels(std::vector<input_type>& data, std::vector<training_label_type>& labels) {
 		if (!mmodDataLoader->isEnd()) {
 			mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
-			preprocessTrainingData(lastImagesToTrain, lastMmodBoxes);
+			adjustImagesSize(lastImagesToTrain, lastMmodBoxes);
 		}
 		else if (cycleDataset) {
 			MmodTrainer::mmodDataLoader->resetLoader();
@@ -69,9 +68,13 @@ public:
 		}
 		
 		(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
+		preprocessTrainingData(data, labels);
 	}
 
 	net_type getNetWithSpecificOptions() {
+		mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
+		adjustImagesSize(lastImagesToTrain, lastMmodBoxes);
+		
 		mmod_options options(lastMmodBoxes, this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
 		options.use_bounding_box_regression = true;
 		cout << "num detector windows: " << options.detector_windows.size() << endl;
@@ -86,6 +89,7 @@ public:
 		return net;
 	}
 
+	virtual void adjustImagesSize(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) = 0;
 	virtual void preprocessTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) = 0;
 };
 #endif // MY_TRAINER

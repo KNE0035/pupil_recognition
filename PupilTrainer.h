@@ -31,13 +31,10 @@ public:
 		int iterationWithoutProgressTreshold,
 		bool verboseMode,
 		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(MINIMUM_IMG_DIM_SIZE, MINIMUM_IMG_DIM_SIZE)), false, 0, verboseMode, mmodDataLoader, 8)
-	{
-		this->mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
-		this->preprocessTrainingData(lastImagesToTrain, lastMmodBoxes);
-	}
+	{}
 
 private:
-	void preprocessTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {
+	void adjustImagesSize(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {
 		std::vector<matrix<rgb_pixel>> notResized = imagesToTrain;
 		std::vector<std::vector<mmod_rect>> mmodBoxesNotResized = mmodBoxes;
 		
@@ -85,6 +82,8 @@ private:
 		this->detectorWindowTargetSize = minimumLabelWidth;
 		this->detectorWindowMinTargetSize = minimumLabelHeight;
 	}
+
+	void preprocessTrainingData(std::vector<matrix<rgb_pixel>>& imagesToTrain, std::vector<std::vector<mmod_rect>>& mmodBoxes) {}
 };
 #endif // PUPIL_TRAINER
 

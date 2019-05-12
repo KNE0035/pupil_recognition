@@ -26,9 +26,6 @@ catch (std::exception& e)
 void trainNetwork() try {
 		MmodDatasetLoader* dataLoader = new MmodDatasetLoader("C:/Users/kne0035/dev/projects/pupil_recognition/training_images", "pupil_info_training.xml", 3000);
 
-		std::vector<std::vector<mmod_rect>> rects;
-		rects = dataLoader->getAllMmodRects();
-
 		std::vector<matrix<rgb_pixel>> imagesToTrain;
 		std::vector<std::vector<mmod_rect>> mmodBoxes;
 
