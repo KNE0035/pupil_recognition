@@ -18,7 +18,6 @@ protected:
 
 private:
 	
-	
 	pupil_detection_net_type_affine pupilNet;
 	frontal_face_detector frontalFaceDetector = dlib::get_frontal_face_detector();
 	shape_predictor faceShapePredictor;

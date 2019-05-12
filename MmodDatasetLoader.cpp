@@ -26,7 +26,6 @@ void MmodDatasetLoader::loadDatasetPart(std::vector<matrix<rgb_pixel>>& images, 
 	int i = lastIndexInDataset;
 	for (int bufferIndex = 0; i < metadata.images.size() && bufferIndex < this->bufferSize; ++i, ++bufferIndex)
 	{
-		double min_rect_size = std::numeric_limits<double>::infinity();
 		rects.clear();
 		for (unsigned long j = 0; j < metadata.images[i].boxes.size(); ++j)
 		{
@@ -47,9 +46,6 @@ std::vector<std::vector<mmod_rect>> MmodDatasetLoader::getAllMmodRects() {
 
 	for (int i = 0; i < metadata.images.size(); i++)
 	{
-		double min_rect_size = std::numeric_limits<double>::infinity();
-		rects.clear();
-
 		for (unsigned long j = 0; j < metadata.images[i].boxes.size(); ++j)
 		{
 			rects.push_back(mmod_rect(metadata.images[i].boxes[j].rect));

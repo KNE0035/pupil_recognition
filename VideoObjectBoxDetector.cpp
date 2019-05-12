@@ -42,8 +42,8 @@ void VideoObjectBoxDetector::startDetector() {
 				{
 					break;
 				}
-				//cv::rotate(cvimg, cvimg, 1);
-				//resize(cvimg, cvimg, cv::Size(960, 540), 0, 0, cv::INTER_LINEAR_EXACT);
+				cv::rotate(cvimg, cvimg, 1);
+				resize(cvimg, cvimg, cv::Size(960, 540), 0, 0, cv::INTER_LINEAR_EXACT);
 
 				cv_image<bgr_pixel> dlibStructImg(cvimg);
 
@@ -53,7 +53,6 @@ void VideoObjectBoxDetector::startDetector() {
 
 				for (unsigned long i = 0; i < objectsBoundingBoxes.size(); ++i) {
 					win.add_overlay(objectsBoundingBoxes[i]);
-					//cin.get();
 				}
 			}
     }

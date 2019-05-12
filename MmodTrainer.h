@@ -62,88 +62,18 @@ public:
 		if (!mmodDataLoader->isEnd()) {
 			mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
 			preprocessTrainingData(lastImagesToTrain, lastMmodBoxes);
-			//(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
-			//lastImagesToTrain = data;
-			//lastMmodBoxes = labels;
-			//image_window win;
-
-			/*for (int i = 0; i < lastImagesToTrain.size(); ++i)
-			{
-				win.clear_overlay();
-				win.set_image(lastImagesToTrain[i]);
-				win.add_overlay(lastMmodBoxes[i][0].rect);
-				cin.get();
-			}*/
 		}
 		else if (cycleDataset) {
 			MmodTrainer::mmodDataLoader->resetLoader();
 			MmodTrainer::mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
 		}
-
-		//data = lastImagesToTrain;
-		//labels = lastMmodBoxes;
+		
 		(*cropper)(this->batchSize, lastImagesToTrain, lastMmodBoxes, data, labels);
-
-		/*image_window win;
-		for (int i = 0; i < data.size(); ++i)
-		{
-			win.clear_overlay();
-			win.set_image(data[i]);
-			if (labels[i].size() != 0) {
-				win.add_overlay(labels[i][0].rect);
-			}
-			cin.get();
-			if (labels[i].size() != 0) {
-				cout << labels[i][0].ignore;
-				cout << labels[i][0].rect.width() << " x "<< labels[i][0].rect.height() << endl;
-			}
-		}*/
-
-		/*int minRectWidth = 500;
-		int minRectHeight = 500;
-		int imgWidth = 1000;
-		int minImgHeight = 1000;
-
-		int maxHe = 0;
-		int maxwi = 0;
-
-		for (std::vector<mmod_rect> rects1 : labels) {
-			for (mmod_rect rect : rects1) {
-				int width = rect.rect.width();
-				int height = rect.rect.height();
-
-				if (minRectWidth > width) {
-					minRectWidth = width;
-				}
-
-				if (minRectHeight > height) {
-					minRectHeight = height;
-				}
-
-				if (maxHe < height) {
-					maxHe = height;
-				}
-
-				if (maxwi < width) {
-					maxwi = width;
-				}
-			}
-		}
-
-		printf("minheight: %d \n", minRectHeight);
-		printf("minWidth: %d \n", minRectWidth);
-		printf("maxheight: %d \n", maxHe);
-		printf("maxWidth: %d \n", maxwi);*/
-
-		//preprocessTrainingData(data, labels);
-
-		for (auto&& img : data)
-			disturb_colors(img, rnd);
 	}
 
 	net_type getNetWithSpecificOptions() {
 		mmod_options options(lastMmodBoxes, this->detectorWindowTargetSize, this->detectorWindowMinTargetSize);
-		
+		options.use_bounding_box_regression = true;
 		cout << "num detector windows: " << options.detector_windows.size() << endl;
 		for (auto& w : options.detector_windows)
 			cout << "detector window width by height: " << w.width << " x " << w.height << endl;
@@ -152,7 +82,7 @@ public:
 		
 		net_type net(options);
 		
-		net.subnet().layer_details().set_num_filters(options.detector_windows.size());
+		net.subnet().layer_details().set_num_filters(options.detector_windows.size() * 5);
 		return net;
 	}
 

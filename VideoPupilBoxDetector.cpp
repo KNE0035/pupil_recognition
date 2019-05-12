@@ -18,13 +18,15 @@ std::vector<rectangle> VideoPupilBoxDetector::getBoundingBoxesFromImage(cv::Mat 
 	std::vector<rectangle> faces = this->frontalFaceDetector(dlibStructImg);
 
 	std::vector<full_object_detection> shapes;
-	for (unsigned long i = 0; i < faces.size(); ++i)
+	for (unsigned long i = 0; i < faces.size(); ++i) {
 		shapes.push_back(faceShapePredictor(dlibStructImg, faces[i]));
+	}
+		
 	
 	int xOffset = 0;
-	int yOffsetUp = cvimg.rows * 0.05;
-	int yOffsetDown = cvimg.rows * 0.05;
-	
+	int yOffsetUp = cvimg.rows * 0.03;
+	int yOffsetDown = cvimg.rows * 0.02;
+
 	for (full_object_detection shape : shapes) {
 		faceDetectionNumber++;
 		rectangle leftEyeArea = rectangle(shape.part(36).x() - xOffset, 
@@ -59,11 +61,6 @@ rectangle VideoPupilBoxDetector::getPupilBoxFromEyeArea(cv::Mat cvimg, rectangle
 
 	matrix<unsigned char> mat;
 	assign_image(mat, cvLeft);
-	int offset = 1107;
-	if (faceDetectionNumber % 31 == 0 && sampleNumber <= 1) {
-		sampleNumber++;
-		save_png(mat, "mySamples/sample" + to_string(sampleNumber + offset) + ".png");
-	}
 	
 	while (mat.nr() < MINIMUM_IMG_DIM_SIZE && mat.nc() < MINIMUM_IMG_DIM_SIZE) {
 		pyramid_up(mat);
@@ -74,26 +71,11 @@ rectangle VideoPupilBoxDetector::getPupilBoxFromEyeArea(cv::Mat cvimg, rectangle
 	assign_image(coloredMat, mat);
 
 	auto dets = pupilNet(coloredMat);
-	
+
 	rectangle searchedRect;
-	
-	/*image_window win;
-	win.clear_overlay();
-	win.set_image(coloredMat);
-	win.add_overlay(searchedRect);
-	cin.get();
-	printf("%d, %d", searchedRect.width(), searchedRect.height());*/
 
 	if (dets.size() > 0) {
 		searchedRect = dets[0];
-		/*printf("asf");
-
-		image_window win;
-		win.clear_overlay();
-		win.set_image(coloredMat);
-		win.add_overlay(searchedRect);
-		cin.get();
-		printf("%d, %d", searchedRect.width(), searchedRect.height());*/
 	}
 
 	rectangle resultRect;

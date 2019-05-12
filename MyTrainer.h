@@ -26,8 +26,6 @@ public:
 	}
 
 	void train() {
-		auto start = std::chrono::high_resolution_clock::now();
-		
 		net_type net = getNetWithSpecificOptions();
 		dnn_trainer<net_type> trainer(net);
 		trainer.set_learning_rate(this->learningRate);
@@ -50,10 +48,6 @@ public:
 		trainer.get_net();
 		net.clean();
 		serialize(this->outputNetworkFile) << net;
-
-		auto finish = std::chrono::high_resolution_clock::now();
-		auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(finish - start);
-		this->trainingTimeMinutes = (microseconds.count() * 10e6) / 60;
 	}
 
 protected:
