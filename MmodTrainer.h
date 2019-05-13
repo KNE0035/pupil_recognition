@@ -56,7 +56,7 @@ protected:
 	MmodDatasetLoader* mmodDataLoader;
 	random_cropper* cropper;
 
-public:
+private:
 	void obtaionNextBatchOfTrainingDataAndLabels(std::vector<input_type>& data, std::vector<training_label_type>& labels) {
 		if (!mmodDataLoader->isEnd()) {
 			mmodDataLoader->loadDatasetPart(lastImagesToTrain, lastMmodBoxes);
