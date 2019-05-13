@@ -13,9 +13,9 @@ void trainNetwork();
 
 int main(int argc, char** argv) try
 {
-	VideoPupilBoxDetector pupilDetector = VideoPupilBoxDetector("pupil_train_1000_samples_conv_stride_8x_bounding_box_regression.dat", "shape_predictor_68_face_landmarks.dat", "test_video.mp4");
-	pupilDetector.startDetector();
-	//trainNetwork();
+	/*VideoPupilBoxDetector pupilDetector = VideoPupilBoxDetector("pupil_train_1000_samples_conv_stride_8x_bounding_box_regression.dat", "shape_predictor_68_face_landmarks.dat", "test_video.mp4");
+	pupilDetector.startDetector();*/
+	trainNetwork();
 	//testNetwork();
 }
 catch (std::exception& e)
@@ -30,7 +30,7 @@ void trainNetwork() try {
 		std::vector<std::vector<mmod_rect>> mmodBoxes;
 
 
-		PupilTrainer pupilTrainer = PupilTrainer(0.1, "pupil_train_sync", "pupil_train_output.dat", 1e-6, 8000, true, dataLoader);
+		PupilTrainer pupilTrainer = PupilTrainer(0.1, "pupil_train_sync", "pupil_train_output.dat", 1e-6, 8000, true, dataLoader, 32);
 		pupilTrainer.train();
 
 		pupil_detection_net_type net;

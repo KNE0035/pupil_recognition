@@ -30,7 +30,8 @@ public:
 		double minimumLearningRate,
 		int iterationWithoutProgressTreshold,
 		bool verboseMode,
-		MmodDatasetLoader* mmodDataLoader) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(MINIMUM_IMG_DIM_SIZE, MINIMUM_IMG_DIM_SIZE)), false, 0, verboseMode, mmodDataLoader, 8)
+		MmodDatasetLoader* mmodDataLoader,
+		int batchSize) : MmodTrainer<pupil_detection_net_type>(startingLearningRate, syncFile, outputNetworkFile, minimumLearningRate, iterationWithoutProgressTreshold, (new chip_dims(MINIMUM_IMG_DIM_SIZE, MINIMUM_IMG_DIM_SIZE)), false, 0, verboseMode, mmodDataLoader, batchSize)
 	{}
 
 private:
