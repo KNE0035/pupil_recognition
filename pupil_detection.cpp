@@ -13,9 +13,9 @@ void trainNetwork();
 
 int main(int argc, char** argv) try
 {
-	/*VideoPupilBoxDetector pupilDetector = VideoPupilBoxDetector("../pupil_train_1000_samples_conv_stride_8x_bounding_box_regression.dat", "../shape_predictor_68_face_landmarks.dat", "../test_video.mp4");
-	pupilDetector.startDetector();*/
-	trainNetwork();
+	VideoPupilBoxDetector pupilDetector = VideoPupilBoxDetector("../pupil_train_1000_samples_conv_stride_8x_bounding_box_regression.dat", "../shape_predictor_68_face_landmarks.dat", "../test_video.mp4");
+	pupilDetector.startDetector();
+	//trainNetwork();
 	//testNetwork();
 }
 catch (std::exception& e)
@@ -102,7 +102,7 @@ void testNetwork() try {
 	std::vector<std::vector<mmod_rect>> mmodBoxes;
 
 	pupil_detection_net_type net;
-	deserialize("pupil_train_1000_samples_conv_stride_8x_bounding_box_regression.dat") >> net;
+	deserialize("../pupil_train_1000_samples_conv_stride_8x_bounding_box_regression.dat") >> net;
 	dataLoader->loadDatasetPart(imagesToTrain, mmodBoxes);
 
 	int pyramidUpScale;
